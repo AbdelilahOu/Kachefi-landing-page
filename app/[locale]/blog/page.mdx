@@ -1,0 +1,79 @@
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import { SocialMetrics } from "./_components/social-metrics";
+import { ArticleNavigation } from "./_components/article-navigation";
+
+<h1 className="text-3xl sm:text-4xl font-bold mb-4">
+  <span className="text-purple-500">Article 1</span> : Les premiers signes du
+  cancer colorectal à ne pas ignorer
+</h1>
+
+<p className="text-gray-500 mb-6">_Publié le 12 septembre 2024_</p>
+
+<div className="prose prose-lg max-w-none mb-8">
+  <p>
+    Le dépistage précoce du cancer colorectal peut sauver des vies. Apprenez à
+    identifier les signes avant-coureurs pour consulter rapidement un
+    professionnel de santé. Des changements dans vos habitudes intestinales,
+    comme une constipation ou une diarrhée persistante, du sang dans les selles,
+    une perte de poids inexpliquée ou des douleurs abdominales peuvent être des
+    signaux d'alarme. N'hésitez pas à en parler à votre médecin. Le dépistage
+    précoce du cancer colorectal peut sauver des vies. Apprenez à identifier les
+    signes avant-coureurs pour consulter rapidement un professionnel de santé.
+    Des changements......
+  </p>
+</div>
+
+<div className="relative w-full h-96 mb-8 rounded-lg overflow-hidden">
+  <Image
+    src="/main-blog-post.jpg"
+    alt="Medical Consultation"
+    layout="fill"
+    objectFit="cover"
+    objectPosition="top"
+    priority
+  />
+</div>
+
+<div className="prose prose-lg max-w-none mb-8">
+  <p>
+    Le dépistage précoce du cancer colorectal peut sauver des vies. Apprenez à
+    identifier les signes avant-coureurs pour consulter rapidement un
+    professionnel de santé. Des changements dans vos habitudes intestinales,
+    comme une constipation ou une diarrhée persistante, du sang dans les selles,
+    une perte de poids inexpliquée ou des do......
+  </p>
+</div>
+
+<div className="flex flex-wrap gap-2 mb-6">
+  <Badge
+    variant="secondary"
+    className="bg-red-100 text-red-800 hover:bg-red-200"
+  >
+    Healthcare
+  </Badge>
+  <Badge
+    variant="secondary"
+    className="bg-green-100 text-green-800 hover:bg-green-200"
+  >
+    Dépistage
+  </Badge>
+  <Badge
+    variant="secondary"
+    className="bg-blue-100 text-blue-800 hover:bg-blue-200"
+  >
+    cancer
+  </Badge>
+  <Badge
+    variant="secondary"
+    className="bg-purple-100 text-purple-800 hover:bg-purple-200"
+  >
+    cancer du sein
+  </Badge>
+</div>
+
+<SocialMetrics views={90} comments={123} likes={59} />
+
+<div className="mt-8">
+  <ArticleNavigation />
+</div>

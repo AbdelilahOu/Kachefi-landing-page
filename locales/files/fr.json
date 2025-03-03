@@ -1,0 +1,297 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "features": "Fonctionnalités",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "blog": "Blog"
+  },
+  "home-page": {
+    "hero": {
+      "title": "Prenez votre <span class=\"text-primary\">santé</span> en main, détectez tôt, agissez tôt",
+      "subtitle": "Kachefi, votre assistant de pré-dépistage et de sensibilisation pour détecter les risques de cancer et agir rapidement.",
+      "download-app": "Télécharger l'App",
+      "get-started": "Commencer",
+      "stats": {
+        "hours": "Heures De Rendez-Vous Avec Les Patients",
+        "patients": "les patients nous ont fait confiance"
+      }
+    },
+    "services": {
+      "search-input": "Je cherche, hôpital...",
+      "h2": "Vous recherchez peut-être",
+      "labels": [
+        "Docteurs",
+        "Laboratoires",
+        "Hôpitaux",
+        "Magasin medical",
+        "Ambulance"
+      ]
+    },
+    "mission": {
+      "title": "À propos <span class=\"text-primary\">Notre mission</span>",
+      "description": "Chez Kachefi, notre mission est de vous accompagner dans la protection de votre santé grâce à un outil simple et accessible. Nous croyons fermement que la prévention et le dépistage précoce sont les clés pour réduire les risques liés aux cancers. En sensibilisant le public aux premiers signes d'alerte et en facilitant l'accès à des informations fiables, nous voulons encourager chacun à prendre des décisions éclairées pour préserver leur bien-être. Kechefi offre des recommandations personnalisées et des parcours de prévention, permettant d'agir rapidement et de maximiser les chances de détection et de traitement précoce.",
+      "stats": {
+        "doctors": "40+ Médecins dévoués",
+        "appointments": "10K+ Horaires des consultations des patients"
+      }
+    },
+    "functionality": {
+      "title": "Fonctionnalités",
+      "content": [
+        {
+          "title": "Questionnaire de pré-dépistage",
+          "description": "Évaluez rapidement votre risque de cancer grâce à un questionnaire simple."
+        },
+        {
+          "title": "Recommandations personnalisées",
+          "description": "Obtenez des conseils adaptés à votre profil santé"
+        },
+        {
+          "title": "Rappels de dépistage",
+          "description": "Notifications pour vos rendez-vous de dépistage."
+        }
+      ],
+      "button": "Réservez une consultation →"
+    },
+    "testimonials": {
+      "title": "Témoignages <span class=\"text-primary\">Ils nous font confiance</span>",
+      "content": [
+        {
+          "name": "Amber Morales",
+          "job": "Designer produit",
+          "quote1": "Duis aute irure dolor in reprehe voluptate velit esse cillum dolo sunt culpa officia.",
+          "quote2": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat sunt culpa officia deserunt mollit anim est laborum."
+        }
+      ],
+      "navigation": {
+        "previous": "Précédent",
+        "next": "Suivant"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Trouvez des réponses à vos questions",
+      "more-questions": {
+        "title": "Vous avez encore des questions ?",
+        "description": "Vous ne trouvez pas la réponse que vous cherchez ? N'hésitez pas à discuter avec notre sympathique équipe.",
+        "button": "Contactez-nous"
+      },
+      "content": [
+        {
+          "question": "Comment fonctionne le questionnaire de pré-dépistage ?",
+          "answer": "Le questionnaire de pré-dépistage de Kechefi est conçu pour évaluer rapidement vos risques potentiels de cancer en se basant sur des données scientifiques. Vous répondez à une série de questions simples concernant vos antécédents médicaux, votre mode de vie, et d&aposéventuels symptômes. À la fin, vous recevez une évaluation personnalisée avec des recommandations adaptées à votre profil."
+        },
+        {
+          "question": "Kechefi remplace-t-il une consultation médicale ?",
+          "answer": "Non, Kechefi ne remplace pas une consultation avec un médecin. Notre application fournit des informations et des recommandations basées sur vos réponses, mais elle ne peut en aucun cas diagnostiquer un cancer. Si vos résultats indiquent un risque élevé, nous vous recommandons de consulter un professionnel de santé pour un diagnostic approfondi."
+        },
+        {
+          "question": "Est-ce que mes données personnelles sont protégées ?",
+          "answer": "Oui, la confidentialité de vos données est une priorité pour nous. Toutes les informations que vous partagez dans l’application sont strictement confidentielles et protégées selon les normes internationales de sécurité des données. Elles ne seront jamais partagées avec des tiers sans votre consentement."
+        },
+        {
+          "question": "Comment fonctionne le questionnaire de pré-dépistage ?",
+          "answer": "Le questionnaire de pré-dépistage de Kechefi est conçu pour évaluer rapidement vos risques potentiels de cancer en se basant sur des données scientifiques. Vous répondez à une série de questions simples concernant vos antécédents médicaux, votre mode de vie, et d&aposéventuels symptômes. À la fin, vous recevez une évaluation personnalisée avec des recommandations adaptées à votre profil."
+        },
+        {
+          "question": "Kechefi remplace-t-il une consultation médicale ?",
+          "answer": "Non, Kechefi ne remplace pas une consultation avec un médecin. Notre application fournit des informations et des recommandations basées sur vos réponses, mais elle ne peut en aucun cas diagnostiquer un cancer. Si vos résultats indiquent un risque élevé, nous vous recommandons de consulter un professionnel de santé pour un diagnostic approfondi."
+        },
+        {
+          "question": "L&aposapplication est-elle gratuite ?",
+          "answer": "Oui, l&aposapplication Kechefi est disponible gratuitement pour tous les utilisateurs. Certaines fonctionnalités avancées pour les professionnels de la santé peuvent nécessiter un abonnement, mais les outils de base pour le public, y compris le questionnaire de pré-dépistage et les recommandations, sont totalement gratuits."
+        },
+        {
+          "question": "Kechefi couvre-t-il tous les types de cancer ?",
+          "answer": "Actuellement, Kechefi est focalisé sur les cancers les plus répandus, tels que le cancer du sein, de la prostate, colorectal, et du col de l&aposutérus. Nous travaillons continuellement à élargir la portée de l&aposapplication pour inclure d&aposautres types de cancers et fournir une couverture plus complète."
+        },
+        {
+          "question": "Comment puis-je accéder à des professionnels de santé via Kechefi ?",
+          "answer": "Kechefi propose une fonctionnalité pour les professionnels de santé abonnés à notre plateforme. Vous pouvez consulter leurs avis sur les risques de cancer et poser des questions via l&aposapplication. Cependant, ces interactions ne remplacent pas une consultation en personne."
+        },
+        {
+          "question": "Kechefi est-il compatible avec tous les téléphones ?",
+          "answer": "Oui, Kechefi est disponible sur les appareils Android et iOS, et il est compatible avec la majorité des téléphones et tablettes. Il suffit de télécharger l&aposapplication depuis Google Play ou l&aposApp Store pour commencer à l&aposutiliser."
+        },
+        {
+          "question": "Puis-je partager mes résultats avec mon médecin ?",
+          "answer": "Absolument ! Vous pouvez facilement exporter vos résultats sous forme de rapport PDF et les partager avec votre médecin pour discuter des prochaines étapes lors de votre consultation"
+        }
+      ]
+    },
+    "mobile-app": {
+      "title": "Téléchargez <br/> <span class=\"text-primary\">l'application</span> Kachefi",
+      "description": "Obtenez le lien pour télécharger l'application",
+      "phone-input": {
+        "country-code": "+212",
+        "placeholder": "Entrez le numéro de téléphone"
+      },
+      "send-button": "Envoyer un SMS",
+      "stores": {
+        "google-play": "Télécharger sur Google Play",
+        "app-store": "Télécharger sur l'App Store"
+      }
+    }
+  },
+  "about-page": {
+    "doctor-profile-card": {
+      "name": "Alan Dosan",
+      "specialty": "Nutrition",
+      "facebook-aria-label": "Facebook",
+      "instagram-aria-label": "Instagram",
+      "linkedin-aria-label": "LinkedIn"
+    },
+    "hero-section": {
+      "title": "<span class=\"text-black font-medium\">À propos</span>,Notre mission",
+      "rating": "Classé n°1 des rendez-vous médicaux par les utilisateurs",
+      "mission-statement": "Chez Kachefi, notre mission est de vous accompagner dans la protection de votre santé grâce à un outil simple et accessible. Nous croyons fermement que la prévention et le dépistage précoce sont les clés pour réduire les risques liés aux cancers. En sensibilisant le public aux premiers signes d'alerte et en facilitant l'accès à des informations fiables, nous voulons encourager chacun à prendre des décisions éclairées pour préserver leur bien-être. Kechefi offre des recommandations personnalisées et des parcours de prévention, permettant d'agir rapidement et de maximiser les chances de détection et de traitement précoce",
+      "doctors": "Médecins dévoués",
+      "appointments": "Horaires des consultations des patients"
+    },
+    "partners-section": {
+      "title": "Partenaires et <br /> collaborateurs <span class=\"text-primary\">médicales</span>",
+      "description": "Travailler en partenariat avec d'autres praticiens permet de mutualiser les compétences, d'enrichir les savoir-faire et d'améliorer la qualité des soins proposés."
+    },
+    "team-carousel": {
+      "title": "Equipe <span class=\"text-primary\">professionnelle</span>",
+      "description": "Meet Our Experience Doctors"
+    },
+    "video-section": {
+      "title": "La santé commence toujours par un mode de vie sain. Être en bonne santé vous rendra plus heureux.",
+      "description": "Prenez rendez-vous en ligne dès maintenant pour voir l'un de nos meilleurs médecins."
+    }
+  },
+  "contact-page": {
+    "title": "Contactez-nous",
+    "description": "Besoin d'aide, de plus d'informations ou de réponses à vos questions sur Kechefi et notre mission de dépistage et de sensibilisation au cancer ? Nous sommes à votre écoute. N'hésitez pas à nous contacter via l'un des moyens ci-dessous",
+    "contact-details": "Coordonnées",
+    "contact-message": "Dites quelque chose pour démarrer une discussion en direct !",
+    "phone": "+212 6 XX XX XX XX",
+    "email": "support@kechefi.com",
+    "address": "123 Rue de la Santé, Casablanca, Maroc",
+    "first-name-label": "Prénom",
+    "first-name-placeholder": "EL AIN",
+    "last-name-label": "Nom",
+    "last-name-placeholder": "Nom",
+    "email-label": "Email",
+    "email-placeholder": "Email",
+    "phone-label": "Numéro de téléphone",
+    "phone-placeholder": "+212 6 XX XX XX XX",
+    "question-label": "Select les questions fréquemment posées:",
+    "question1": "Comment fonctionne le questionnaire Kechefi ?",
+    "question2": "Puis-je utiliser Kechefi à l'étranger ?",
+    "question3": "Kechefi remplace-t-il une consultation médicale ?",
+    "message-label": "Message",
+    "message-placeholder": "Entrer votre message",
+    "submit-button": "Envoyer Message",
+    "submitting": "Envoi en cours...",
+    "first-name-error": "Le prénom doit contenir au moins 2 caractères.",
+    "last-name-error": "Le nom doit contenir au moins 2 caractères.",
+    "email-error": "Veuillez saisir une adresse e-mail valide.",
+    "phone-error": "Le numéro de téléphone doit contenir au moins 10 chiffres.",
+    "question-error": "Veuillez sélectionner une question.",
+    "message-error": "Le message doit contenir au moins 10 caractères."
+  },
+  "blog-layout": {
+    "welcome-title": "Bienvenue sur le blog de Kochefi!",
+    "welcome-text": "Ici, nous partageons des informations essentielles pour la prévention du cancer, des témoignages inspirants de patients, ainsi que les dernières avancées médicales en matière de dépistage. Restez informé et prenez soin de votre santé grâce à nos articles détaillés.",
+    "comment-title": "3 commentaires",
+    "comment-text": "Article très informatif, merci pour ces précisions sur les symptômes à surveiller.",
+    "reply": "Répondre",
+    "add-comment": "Ajouter un commentaire",
+    "comment-placeholder": "Votre commentaire...",
+    "name-placeholder": "Votre nom",
+    "email-placeholder": "Votre email",
+    "post-comment": "Poster Commentaire"
+  },
+  "common": {
+    "read-more": "Lire la suite",
+    "view-all": "Voir tout",
+    "search": "Rechercher",
+    "loading": "Chargement...",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "share": "Partager",
+    "error": {
+      "general": "Une erreur s'est produite",
+      "not-found": "Page non trouvée"
+    },
+    "success": {
+      "saved": "Enregistré avec succès",
+      "updated": "Mis à jour avec succès"
+    }
+  },
+  "footer": {
+    "description": "Kachefi, votre assistant de pré-dépistage et de sensibilisation pour détecter les risques de cancer et agir rapidement.",
+    "links": {
+      "title": "Liens utiles",
+      "items": [
+        "Accueil",
+        "Fonctionnalités",
+        "A propos",
+        "Temoignages",
+        "FAQ",
+        "Blog",
+        "Contact"
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "123 Rue de la Santé, Casablanca, Maroc",
+      "email": "support@kechefi.com",
+      "phone": "+212 6 XX XX XX XX"
+    },
+    "newsletter": {
+      "title": "News Letter",
+      "description": "Abonnez-vous à notre newsletter pour recevoir les derniers blogs",
+      "placeholder": "Entrez votre email",
+      "button": "S'abonner"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "copyright": "Kachefi 2024 © Tous droits réservés"
+  },
+  "find-doctor": {
+    "available-doctors": "médecins disponibles à Rabat",
+    "booking-description": "Prenez rendez-vous avec un temps d'attente minimum et des coordonnées de médecin vérifiées",
+    "time-slots": {
+      "morning": "Matin",
+      "afternoon": "Après-Midi",
+      "evening": "Soir",
+      "available-slots": "Rendez-vous Disponibles"
+    },
+    "doctor-card": {
+      "specialist": "Spécialiste",
+      "experience": "ans d'expérience au total",
+      "consultation-fee": "Frais de consultation à la clinique",
+      "free": "Gratuite",
+      "testimonials": "Témoignages de patients",
+      "book-button": "Réserver une Visite Clinique GRATUIT"
+    },
+    "location": {
+      "title": "Indiquez votre emplacement actuel pour voir votre médecin près de chez vous",
+      "subtitle": "Vous voyez des résultats du Maroc",
+      "find-location": "Trouver l'emplacement",
+      "current-location": "Localisation Actuelle"
+    },
+    "date-navigation": {
+      "today": "Aujourd'hui",
+      "tomorrow": "Demain"
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "subtitle": "Obtenez votre réponse",
+      "satisfied-patients": "Des patients satisfaits"
+    }
+  }
+}

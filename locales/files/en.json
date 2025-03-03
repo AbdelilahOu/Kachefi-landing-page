@@ -1,0 +1,297 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign up",
+    "features": "Features",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "blog": "Blog"
+  },
+  "home-page": {
+    "hero": {
+      "title": "Take control of your <span class=\"text-primary\">health</span>, detect early, act early",
+      "subtitle": "Kachefi, your pre-screening and awareness assistant to detect cancer risks and act quickly.",
+      "download-app": "Download the App",
+      "get-started": "Get Started",
+      "stats": {
+        "hours": "Hours of Appointments with Patients",
+        "patients": "Patients trusted us"
+      }
+    },
+    "services": {
+      "search-input": "I'm looking for, hospital...",
+      "h2": "You might be looking for",
+      "labels": [
+        "Doctors",
+        "Laboratories",
+        "Hospitals",
+        "Medical Store",
+        "Ambulance"
+      ]
+    },
+    "mission": {
+      "title": "About <span class=\"text-primary\">Our Mission</span>",
+      "description": "At Kachefi, our mission is to support you in protecting your health with a simple and accessible tool. We firmly believe that prevention and early detection are key to reducing cancer risks. By raising public awareness about the first warning signs and facilitating access to reliable information, we want to encourage everyone to make informed decisions to preserve their well-being. Kechefi offers personalized recommendations and prevention paths, allowing you to act quickly and maximize the chances of early detection and treatment.",
+      "stats": {
+        "doctors": "40+ Dedicated Doctors",
+        "appointments": "10K+ Patient Consultation Hours"
+      }
+    },
+    "functionality": {
+      "title": "Functionalities",
+      "content": [
+        {
+          "title": "Pre-screening questionnaire",
+          "description": "Quickly assess your cancer risk using a simple questionnaire."
+        },
+        {
+          "title": "Personalized recommendations",
+          "description": "Get advice tailored to your health profile"
+        },
+        {
+          "title": "Screening reminders",
+          "description": "Notifications for your screening appointments."
+        }
+      ],
+      "button": "Book a consultation →"
+    },
+    "testimonials": {
+      "title": "Testimonials <span class=\"text-primary\">They trust us</span>",
+      "content": [
+        {
+          "name": "Amber Morales",
+          "job": "Product Designer",
+          "quote1": "Duis aute irure dolor in reprehe voluptate velit esse cillum dolo sunt culpa officia.",
+          "quote2": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat sunt culpa officia deserunt mollit anim est laborum."
+        }
+      ],
+      "navigation": {
+        "previous": "Previous",
+        "next": "Next"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to your questions",
+      "more-questions": {
+        "title": "Still have questions?",
+        "description": "Can't find the answer you're looking for? Don't hesitate to chat with our friendly team.",
+        "button": "Contact us"
+      },
+      "content": [
+        {
+          "question": "How does the pre-screening questionnaire work?",
+          "answer": "The Kechefi pre-screening questionnaire is designed to quickly assess your potential cancer risks based on scientific data. You answer a series of simple questions regarding your medical history, lifestyle, and any symptoms. At the end, you receive a personalized assessment with recommendations tailored to your profile."
+        },
+        {
+          "question": "Does Kechefi replace a medical consultation?",
+          "answer": "No, Kechefi does not replace a consultation with a doctor. Our application provides information and recommendations based on your answers, but it can in no way diagnose cancer. If your results indicate a high risk, we recommend that you consult a healthcare professional for a thorough diagnosis."
+        },
+        {
+          "question": "Is my personal data protected?",
+          "answer": "Yes, the confidentiality of your data is a priority for us. All the information you share in the application is strictly confidential and protected according to international data security standards. They will never be shared with third parties without your consent."
+        },
+        {
+          "question": "How does the pre-screening questionnaire work?",
+          "answer": "The Kechefi pre-screening questionnaire is designed to quickly assess your potential cancer risks based on scientific data. You answer a series of simple questions regarding your medical history, lifestyle, and any symptoms. At the end, you receive a personalized assessment with recommendations tailored to your profile."
+        },
+        {
+          "question": "Does Kechefi replace a medical consultation?",
+          "answer": "No, Kechefi does not replace a consultation with a doctor. Our application provides information and recommendations based on your answers, but it can in no way diagnose cancer. If your results indicate a high risk, we recommend that you consult a healthcare professional for a thorough diagnosis."
+        },
+        {
+          "question": "Is the application free?",
+          "answer": "Yes, the Kechefi application is available for free to all users. Some advanced features for health professionals may require a subscription, but the basic tools for the public, including the pre-screening questionnaire and recommendations, are completely free."
+        },
+        {
+          "question": "Does Kechefi cover all types of cancer?",
+          "answer": "Currently, Kechefi is focused on the most common cancers, such as breast, prostate, colorectal, and cervical cancer. We are continually working to expand the scope of the application to include other types of cancers and provide more comprehensive coverage."
+        },
+        {
+          "question": "How can I access healthcare professionals via Kechefi?",
+          "answer": "Kechefi offers a feature for healthcare professionals subscribed to our platform. You can consult their opinions on cancer risks and ask questions via the application. However, these interactions do not replace an in-person consultation."
+        },
+        {
+          "question": "Is Kechefi compatible with all phones?",
+          "answer": "Yes, Kechefi is available on Android and iOS devices, and it is compatible with most phones and tablets. Simply download the application from Google Play or the App Store to start using it."
+        },
+        {
+          "question": "Can I share my results with my doctor?",
+          "answer": "Absolutely! You can easily export your results as a PDF report and share them with your doctor to discuss the next steps during your consultation"
+        }
+      ]
+    },
+    "mobile-app": {
+      "title": "Download <br/> <span class=\"text-primary\">the Kachefi app</span>",
+      "description": "Get the link to download the app",
+      "phone-input": {
+        "country-code": "+212",
+        "placeholder": "Enter phone number"
+      },
+      "send-button": "Send SMS",
+      "stores": {
+        "google-play": "Download on Google Play",
+        "app-store": "Download on the App Store"
+      }
+    }
+  },
+  "about-page": {
+    "doctor-profile-card": {
+      "name": "Alan Dosan",
+      "specialty": "Nutrition",
+      "facebook-aria-label": "Facebook",
+      "instagram-aria-label": "Instagram",
+      "linkedin-aria-label": "LinkedIn"
+    },
+    "hero-section": {
+      "title": "<span class=\"text-black font-medium\">About</span>,Our mission",
+      "rating": "Ranked #1 in medical appointments by users",
+      "mission-statement": "At Kachefi, our mission is to support you in protecting your health with a simple and accessible tool. We firmly believe that prevention and early detection are key to reducing cancer risks. By raising public awareness about the first warning signs and facilitating access to reliable information, we want to encourage everyone to make informed decisions to preserve their well-being. Kechefi offers personalized recommendations and prevention paths, allowing you to act quickly and maximize the chances of early detection and treatment",
+      "doctors": "Dedicated Doctors",
+      "appointments": "Patient Consultation Hours"
+    },
+    "partners-section": {
+      "title": "Partners and <br /> medical <span class=\"text-primary\">collaborators</span>",
+      "description": "Working in partnership with other practitioners allows us to pool skills, enrich know-how and improve the quality of care offered."
+    },
+    "team-carousel": {
+      "title": "Professional <span class=\"text-primary\">team</span>",
+      "description": "Meet Our Experience Doctors"
+    },
+    "video-section": {
+      "title": "Health always starts with a healthy lifestyle. Being healthy will make you happier.",
+      "description": "Book an appointment online now to see one of our top doctors."
+    }
+  },
+  "contact-page": {
+    "title": "Contact Us",
+    "description": "Need help, more information, or answers to your questions about Kechefi and our mission for cancer screening and awareness? We're here to listen. Please don't hesitate to contact us through any of the means below",
+    "contact-details": "Contact Details",
+    "contact-message": "Say something to start a live discussion!",
+    "phone": "+212 6 XX XX XX XX",
+    "email": "support@kechefi.com",
+    "address": "123 Rue de la Santé, Casablanca, Morocco",
+    "first-name-label": "First Name",
+    "first-name-placeholder": "EL AIN",
+    "last-name-label": "Last Name",
+    "last-name-placeholder": "Last Name",
+    "email-label": "Email",
+    "email-placeholder": "Email",
+    "phone-label": "Phone Number",
+    "phone-placeholder": "+212 6 XX XX XX XX",
+    "question-label": "Select frequently asked questions:",
+    "question1": "How does the Kechefi questionnaire work?",
+    "question2": "Can I use Kechefi abroad?",
+    "question3": "Does Kechefi replace a medical consultation?",
+    "message-label": "Message",
+    "message-placeholder": "Enter your message",
+    "submit-button": "Send Message",
+    "submitting": "Submitting...",
+    "first-name-error": "First name must contain at least 2 characters.",
+    "last-name-error": "Last name must contain at least 2 characters.",
+    "email-error": "Please enter a valid email address.",
+    "phone-error": "Phone number must contain at least 10 digits.",
+    "question-error": "Please select a question.",
+    "message-error": "Message must contain at least 10 characters."
+  },
+  "blog-layout": {
+    "welcome-title": "Welcome to the Kochefi blog!",
+    "welcome-text": "Here, we share essential information for cancer prevention, inspiring patient testimonials, as well as the latest medical advances in screening. Stay informed and take care of your health with our detailed articles.",
+    "comment-title": "3 comments",
+    "comment-text": "Very informative article, thank you for the clarifications on the symptoms to watch out for.",
+    "reply": "Reply",
+    "add-comment": "Add a comment",
+    "comment-placeholder": "Your comment...",
+    "name-placeholder": "Your name",
+    "email-placeholder": "Your email",
+    "post-comment": "Post Comment"
+  },
+  "common": {
+    "read-more": "Read more",
+    "view-all": "View all",
+    "search": "Search",
+    "loading": "Loading...",
+    "previous": "Previous",
+    "next": "Next",
+    "share": "Share",
+    "error": {
+      "general": "An error occurred",
+      "not-found": "Page not found"
+    },
+    "success": {
+      "saved": "Saved successfully",
+      "updated": "Updated successfully"
+    }
+  },
+  "footer": {
+    "description": "Kachefi, your pre-screening and awareness assistant to detect cancer risks and act quickly.",
+    "links": {
+      "title": "Useful links",
+      "items": [
+        "Home",
+        "Features",
+        "About",
+        "Testimonials",
+        "FAQ",
+        "Blog",
+        "Contact"
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "123 Rue de la Santé, Casablanca, Morocco",
+      "email": "support@kechefi.com",
+      "phone": "+212 6 XX XX XX XX"
+    },
+    "newsletter": {
+      "title": "News Letter",
+      "description": "Subscribe to our newsletter to receive the latest blogs",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "copyright": "Kachefi 2024 © All rights reserved"
+  },
+  "find-doctor": {
+    "available-doctors": "doctors available in Rabat",
+    "booking-description": "Book an appointment with minimal wait time and verified doctor details",
+    "time-slots": {
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "available-slots": "Available Slots"
+    },
+    "doctor-card": {
+      "specialist": "Specialist",
+      "experience": "years of total experience",
+      "consultation-fee": "Consultation Fee at Clinic",
+      "free": "Free",
+      "testimonials": "Patient Testimonials",
+      "book-button": "Book a FREE Clinic Visit"
+    },
+    "location": {
+      "title": "Provide your current location to see your doctor near you",
+      "subtitle": "You are seeing results from Morocco",
+      "find-location": "Find Location",
+      "current-location": "Current Location"
+    },
+    "date-navigation": {
+      "today": "Today",
+      "tomorrow": "Tomorrow"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Get your answer",
+      "satisfied-patients": "Satisfied patients"
+    }
+  }
+}
