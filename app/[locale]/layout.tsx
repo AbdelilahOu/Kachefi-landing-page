@@ -77,7 +77,7 @@ export default async function RootLayout({
   params,
 }: {
   children: ReactElement;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const dir = locale === "ar" ? "rtl" : "ltr";
