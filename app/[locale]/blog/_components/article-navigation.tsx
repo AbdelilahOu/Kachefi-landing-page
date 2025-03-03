@@ -3,14 +3,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function ArticleNavigation() {
   return (
-    <div className="flex justify-between mt-8">
-      <Link href="#" className="text-purple-500 flex items-center">
-        <ChevronLeft className="w-4 h-4 mr-1" />
+    <div className="mt-8 flex justify-between">
+      <Link href="#" className="flex items-center text-purple-500">
+        <ChevronLeft className="mr-1 h-4 w-4" />
         Previous
       </Link>
-      <Link href="#" className="text-purple-500 flex items-center">
+      <Link href="#" className="flex items-center text-purple-500">
         Next
-        <ChevronRight className="w-4 h-4 ml-1" />
+        <ChevronRight className="ml-1 h-4 w-4" />
       </Link>
     </div>
   );

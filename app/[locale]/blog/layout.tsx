@@ -19,13 +19,13 @@ export default async function WithNavigationLayout({
       <div className="space-y-8">
         <BlogNavigation />
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 px-4 py-8">
+        <div className="grid grid-cols-1 px-4 py-8 lg:grid-cols-5">
           {/* Social Media Sidebar - moved to top on small screens */}
-          <aside className="w-full px-2 flex justify-center lg:mt-0">
-            <ul className="flex lg:flex-col gap-4 bg-white shadow-md h-fit p-4">
+          <aside className="flex w-full justify-center px-2 lg:mt-0">
+            <ul className="flex h-fit gap-4 bg-white p-4 shadow-md lg:flex-col">
               <Link
                 href="#"
-                className="text-black inline-flex gap-2 py-0.5 hover:text-white"
+                className="inline-flex gap-2 py-0.5 text-black hover:text-white"
               >
                 <Facebook className="h-5 w-5" />
                 600
@@ -33,7 +33,7 @@ export default async function WithNavigationLayout({
               </Link>
               <Link
                 href="#"
-                className="text-black inline-flex gap-2 py-0.5 hover:text-white"
+                className="inline-flex gap-2 py-0.5 text-black hover:text-white"
               >
                 <Instagram className="h-5 w-5" />
                 600
@@ -41,7 +41,7 @@ export default async function WithNavigationLayout({
               </Link>
               <Link
                 href="#"
-                className="text-black inline-flex gap-2 py-0.5 hover:text-white"
+                className="inline-flex gap-2 py-0.5 text-black hover:text-white"
               >
                 <Linkedin className="h-5 w-5" />
                 600
@@ -49,7 +49,7 @@ export default async function WithNavigationLayout({
               </Link>
               <Link
                 href="#"
-                className="text-black inline-flex gap-2 py-0.5 hover:text-white"
+                className="inline-flex gap-2 py-0.5 text-black hover:text-white"
               >
                 <Youtube className="h-5 w-5" />
                 600
@@ -59,12 +59,12 @@ export default async function WithNavigationLayout({
           </aside>
           {/* Main Content */}
           <div className="lg:col-span-3 lg:col-start-2">
-            <header className="bg-white border-b">
-              <div className="container space-y-4 mx-auto lg:px-4 py-6">
-                <h1 className="text-2xl font-semibold text-gray-800">
+            <header className="border-b bg-white">
+              <div className="container mx-auto space-y-4 py-6 lg:px-4">
+                <h1 className="font-semibold text-2xl text-gray-800">
                   {t("welcome-title")}
                 </h1>
-                <p className="p-2 border-l-2 border-black">
+                <p className="border-black border-l-2 p-2">
                   {t("welcome-text")}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default async function WithNavigationLayout({
 
             {/* Comments Section */}
             <div className="mt-12">
-              <h2 className="text-2xl font-semibold mb-6">
+              <h2 className="mb-6 font-semibold text-2xl">
                 {t("comment-title")}
               </h2>
 
@@ -86,11 +86,11 @@ export default async function WithNavigationLayout({
                     <AvatarFallback>JD</AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
-                    <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="rounded-lg bg-gray-50 p-4">
                       <h3 className="font-semibold">Jean Dupont</h3>
-                      <p className="text-gray-600 mt-1">{t("comment-text")}</p>
+                      <p className="mt-1 text-gray-600">{t("comment-text")}</p>
                     </div>
-                    <div className="flex gap-4 mt-2 text-sm text-gray-500">
+                    <div className="mt-2 flex gap-4 text-gray-500 text-sm">
                       <button className="hover:text-gray-700">
                         {t("reply")}
                       </button>
@@ -102,25 +102,25 @@ export default async function WithNavigationLayout({
 
               {/* Comment Form */}
               <form className="mt-8 space-y-3">
-                <h3 className="text-lg font-semibold mb-4">
+                <h3 className="mb-4 font-semibold text-lg">
                   {t("add-comment")}
                 </h3>
                 <Textarea
                   placeholder={t("comment-placeholder")}
-                  className="min-h-[120px] mb-4"
+                  className="mb-4 min-h-[120px]"
                 />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
                   <Input placeholder={t("name-placeholder")} />
                   <Input placeholder={t("email-placeholder")} />
                 </div>
-                <Button className="hover:bg-purple-700 text-white">
+                <Button className="text-white hover:bg-purple-700">
                   {t("post-comment")}
                 </Button>
               </form>
             </div>
           </div>
           {/* Sidebar */}
-          <div className="lg:col-span-1 mt-8 lg:mt-0">
+          <div className="mt-8 lg:col-span-1 lg:mt-0">
             <BlogSidebar />
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardFooter } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { getScopedI18n } from "@/locales/server";
 import {
   ArrowLeft,
@@ -14,19 +14,19 @@ export async function Functionality() {
 
   const features = [
     {
-      icon: <ClipboardList className="w-6 h-6 text-primary" />,
+      icon: <ClipboardList className="h-6 w-6 text-primary" />,
       title: scopedI18N("content.0.title"),
       description: scopedI18N("content.0.description"),
       link: "#",
     },
     {
-      icon: <Settings className="w-6 h-6 text-primary" />,
+      icon: <Settings className="h-6 w-6 text-primary" />,
       title: scopedI18N("content.1.title"),
       description: scopedI18N("content.1.description"),
       link: "#",
     },
     {
-      icon: <Bell className="w-6 h-6 text-primary" />,
+      icon: <Bell className="h-6 w-6 text-primary" />,
       title: scopedI18N("content.2.title"),
       description: scopedI18N("content.2.description"),
       link: "#",
@@ -34,9 +34,9 @@ export async function Functionality() {
   ];
 
   return (
-    <div className="w-full h-fit bg-gradient-to-r from-violet-100 to-slate-50">
-      <div className="w-full container h-full mx-auto px-4 py-14">
-        <h2 className="text-4xl font-medium text-primary mb-8">
+    <div className="h-fit w-full bg-gradient-to-r from-violet-100 to-slate-50">
+      <div className="container mx-auto h-full w-full px-4 py-14">
+        <h2 className="mb-8 font-medium text-4xl text-primary">
           {scopedI18N("title")}
         </h2>
 
@@ -45,20 +45,22 @@ export async function Functionality() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className={`flex-none flex flex-col justify-between w-full md:w-1/3 p-6 bg-white transition-transform duration-300 border-none transform`}
+                className={
+                  "flex w-full flex-none transform flex-col justify-between border-none bg-white p-6 transition-transform duration-300 md:w-1/3"
+                }
               >
-                <div className="rounded-full w-12 h-12 flex items-center justify-center bg-primary/10 mb-4">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-medium mb-2">{feature.title}</h3>
-                  <p className="text-base text-muted-foreground mb-4">
+                  <h3 className="mb-2 font-medium text-2xl">{feature.title}</h3>
+                  <p className="mb-4 text-base text-muted-foreground">
                     {feature.description}
                   </p>
                 </div>
                 <Button
                   variant="link"
-                  className="text-primary p-0 text-start w-fit"
+                  className="w-fit p-0 text-start text-primary"
                 >
                   {scopedI18N("button")}
                 </Button>
@@ -67,14 +69,14 @@ export async function Functionality() {
           </div>
         </div>
 
-        <div className="w-full flex pt-14 justify-between">
+        <div className="flex w-full justify-between pt-14">
           <Button size="icon" className="rounded-full bg-gray-500">
             <ArrowLeft />
           </Button>
-          <div className="flex items-center justify-center gap-6 h-12">
-            <div className="size-2 rounded-full bg-primary"></div>
-            <div className="size-2 rounded-full bg-primary/60"></div>
-            <div className="size-2 rounded-full bg-primary/60"></div>
+          <div className="flex h-12 items-center justify-center gap-6">
+            <div className="size-2 rounded-full bg-primary" />
+            <div className="size-2 rounded-full bg-primary/60" />
+            <div className="size-2 rounded-full bg-primary/60" />
           </div>
           <Button size="icon" className="rounded-full">
             <ArrowRight />

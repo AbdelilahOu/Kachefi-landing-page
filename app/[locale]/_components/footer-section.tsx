@@ -8,8 +8,8 @@ import Link from "next/link";
 export async function Footer() {
   const t = await getScopedI18n("footer");
   return (
-    <footer className="bg-[#25145D] mt-auto py-12 pt-14">
-      <div className="container mx-auto px-4 grid gap-4 lg:gap-12 lg:grid-cols-4">
+    <footer className="mt-auto bg-[#25145D] py-12 pt-14">
+      <div className="container mx-auto grid gap-4 px-4 lg:grid-cols-4 lg:gap-12">
         {/*  */}
         <div className="space-y-4">
           <Image
@@ -19,13 +19,13 @@ export async function Footer() {
             height={40}
             className="size-28 w-auto"
           />
-          <p className="text-sm text-gray-300">{t("description")}</p>
+          <p className="text-gray-300 text-sm">{t("description")}</p>
         </div>
 
         {/*  */}
         <div className="lg:pt-12">
-          <h3 className="font-semibold mb-4 text-white">{t("links.title")}</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <h3 className="mb-4 font-semibold text-white">{t("links.title")}</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             {Array(7)
               .fill(0)
               .map((_, item) => (
@@ -33,7 +33,7 @@ export async function Footer() {
                   <Link href="#" className="hover:text-white">
                     {
                       //@ts-ignore
-                      t("links.items." + item)
+                      t(`links.items.${item}`)
                     }
                   </Link>
                 </li>
@@ -43,10 +43,10 @@ export async function Footer() {
 
         {/*  */}
         <div className="lg:pt-12">
-          <h3 className="font-semibold mb-4 text-white">
+          <h3 className="mb-4 font-semibold text-white">
             {t("contact.title")}
           </h3>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>{t("contact.address")}</li>
             <li>{t("contact.email")}</li>
             <li>{t("contact.phone")}</li>
@@ -55,19 +55,19 @@ export async function Footer() {
 
         {/*  */}
         <div className="lg:pt-12">
-          <h3 className="font-semibold mb-4 text-white">
+          <h3 className="mb-4 font-semibold text-white">
             {t("newsletter.title")}
           </h3>
-          <p className="text-sm text-gray-300 mb-4">
+          <p className="mb-4 text-gray-300 text-sm">
             {t("newsletter.description")}
           </p>
           <div className="space-y-2">
             <Input
               type="email"
               placeholder={t("newsletter.placeholder")}
-              className="bg-white/10 border-white bg-white rounded-sm"
+              className="rounded-sm border-white bg-white bg-white/10"
             />
-            <Button className="w-full bg-[#9D7EFF] rounded-sm hover:bg-[#8B6AFF]">
+            <Button className="w-full rounded-sm bg-[#9D7EFF] hover:bg-[#8B6AFF]">
               {t("newsletter.button")}
             </Button>
           </div>
@@ -75,8 +75,8 @@ export async function Footer() {
       </div>
 
       {/*  */}
-      <div className="container mx-auto px-4 mt-12 pt-8 border-t border-white">
-        <div className="flex flex-wrap justify-between items-center gap-4">
+      <div className="container mx-auto mt-12 border-white border-t px-4 pt-8">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex gap-4">
             <Link href="#" className="text-gray-300 hover:text-white">
               <Facebook className="h-5 w-5" />
@@ -95,7 +95,7 @@ export async function Footer() {
               <span className="sr-only">{t("social.youtube")}</span>
             </Link>
           </div>
-          <div className="text-sm text-gray-300">{t("copyright")}</div>
+          <div className="text-gray-300 text-sm">{t("copyright")}</div>
         </div>
       </div>
     </footer>

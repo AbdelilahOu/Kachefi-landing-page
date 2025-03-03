@@ -36,23 +36,23 @@ export default function FAQSection() {
   const t = useScopedI18n("find-doctor");
 
   return (
-    <div className="w-full flex bg-white">
-      <div className="mx-auto bg-white container relative px-4 py-12">
+    <div className="flex w-full bg-white">
+      <div className="container relative mx-auto bg-white px-4 py-12">
         <p className="text-center text-[#321C7D]/90">{t("faq.subtitle")}</p>
-        <h2 className="mb-8 text-4xl text-center font-bold text-[#321C7D]">
+        <h2 className="mb-8 text-center font-bold text-4xl text-[#321C7D]">
           {t("faq.title")}
         </h2>
         {/* Decorative Wave */}
-        <div className="absolute right-12 top-4 h-24 w-24 text-purple-400">
+        <div className="absolute top-4 right-12 h-24 w-24 text-purple-400">
           <BouncyLineIcon />
         </div>
-        <div className="absolute -left-[10%] top-[25%] h-24 w-24 text-purple-400">
+        <div className="-left-[10%] absolute top-[25%] h-24 w-24 text-purple-400">
           <SignatureIcon />
         </div>
-        <div className="relative pt-4 m-auto">
-          <div className="grid gap-8 max-w-6xl m-auto lg:grid-cols-2">
-            <div className="relative max-w-lg m-auto lg:mx-0">
-              <div className="overflow-hidden shadow-2xl p-2 rounded-sm">
+        <div className="relative m-auto pt-4">
+          <div className="m-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+            <div className="relative m-auto max-w-lg lg:mx-0">
+              <div className="overflow-hidden rounded-sm p-2 shadow-2xl">
                 <Image
                   src="/find-doctor-faq.png"
                   alt="Happy healthcare providers"
@@ -61,13 +61,13 @@ export default function FAQSection() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="absolute -right-6 rounded-full top-12 bg-white p-3 aspect-square h-16 shadow-lg">
-                <div className="flex items-center justify-center h-full">
+              <div className="-right-6 absolute top-12 aspect-square h-16 rounded-full bg-white p-3 shadow-lg">
+                <div className="flex h-full items-center justify-center">
                   <HeartInHandsIcon />
                 </div>
               </div>
-              <div className="absolute -left-16 bottom-12 rounded-lg bg-white p-3 w-full max-w-60 h-20 shadow-lg">
-                <div className="flex items-center h-full gap-2">
+              <div className="-left-16 absolute bottom-12 h-20 w-full max-w-60 rounded-lg bg-white p-3 shadow-lg">
+                <div className="flex h-full items-center gap-2">
                   <span className="text-4xl">😊</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-[#321C7D]">84k+</span>
@@ -79,7 +79,7 @@ export default function FAQSection() {
               </div>
             </div>
             <div className="relative">
-              <Accordion type="single" collapsible className="w-full h-full">
+              <Accordion type="single" collapsible className="h-full w-full">
                 {faqItems.map((item, index) => (
                   <AccordionItem
                     key={index}
@@ -87,7 +87,7 @@ export default function FAQSection() {
                     value={`item-${index}`}
                   >
                     <AccordionTrigger className="text-left hover:no-underline">
-                      <span className="flex items-center gap-4 text-[#321C7D] font-semibold">
+                      <span className="flex items-center gap-4 font-semibold text-[#321C7D]">
                         {item.question}
                       </span>
                     </AccordionTrigger>

@@ -6,7 +6,7 @@ export async function VideoSection() {
   const scopedI18N = await getScopedI18n("about-page");
   return (
     <section className="p-8">
-      <div className="relative rounded-lg overflow-hidden w-full aspect-video">
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg">
         <Image
           src="/hero-image.png"
           alt="Medical team video"
@@ -14,11 +14,11 @@ export async function VideoSection() {
           fill
         />
         <button className="absolute inset-0 flex items-center justify-center">
-          <Play className="w-16 h-16 text-white" />
+          <Play className="h-16 w-16 text-white" />
         </button>
-        <div className="absolute bottom-0 justify-between px-8 py-2 bg-gradient-to-t from-primary via-primary to-transparent h-40 flex items-end text-white">
-          <div className="grid grid-cols-2 gap-2 h-fit">
-            <p className="text-2xl font-semibold">
+        <div className="absolute bottom-0 flex h-40 items-end justify-between bg-gradient-to-t from-primary via-primary to-transparent px-8 py-2 text-white">
+          <div className="grid h-fit grid-cols-2 gap-2">
+            <p className="font-semibold text-2xl">
               {scopedI18N("video-section.title")}
             </p>
             <p>{scopedI18N("video-section.description")}</p>

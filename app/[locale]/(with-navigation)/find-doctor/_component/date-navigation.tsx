@@ -39,18 +39,17 @@ export function DateNavigation() {
           <Button
             variant="ghost"
             key={index}
-            className={`px-4 border-b-4 h-fit rounded-none text-sm
-              ${
-                date.selected
-                  ? "border-b-primary text-primary"
-                  : "text-gray-600 hover:bg-gray-100"
-              }`}
+            className={`h-fit rounded-none border-b-4 px-4 text-sm ${
+              date.selected
+                ? "border-b-primary text-primary"
+                : "text-gray-600 hover:bg-gray-100"
+            }`}
           >
-            <div className="text-left py-1">
-              <div className="font-semibold text-center text-black">
+            <div className="py-1 text-left">
+              <div className="text-center font-semibold text-black">
                 {date.label}
               </div>
-              <div className="text-xs text-pink-600">{date.sublabel}</div>
+              <div className="text-pink-600 text-xs">{date.sublabel}</div>
             </div>
           </Button>
         ))}

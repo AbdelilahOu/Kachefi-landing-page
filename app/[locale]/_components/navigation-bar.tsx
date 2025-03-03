@@ -29,7 +29,7 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
-      <div className="container flex h-fit m-auto items-center justify-between">
+      <div className="container m-auto flex h-fit items-center justify-between">
         <div className="flex items-center gap-6">
           <Link className="flex items-center gap-2" href="/">
             <Image
@@ -41,40 +41,40 @@ export function Navigation() {
             />
           </Link>
         </div>
-        <nav className="hidden m-auto md:flex items-center gap-4 lg:gap-8">
+        <nav className="m-auto hidden items-center gap-4 md:flex lg:gap-8">
           <Link
-            className="text-sm font-semibold text-primary hover:text-primary"
+            className="font-semibold text-primary text-sm hover:text-primary"
             href="/"
           >
             {scopedI18N("home")}
           </Link>
-          <Link className="text-sm font-medium hover:text-primary" href="#">
+          <Link className="font-medium text-sm hover:text-primary" href="#">
             {scopedI18N("services")}
           </Link>
           <Link
-            className="text-sm font-medium hover:text-primary"
+            className="font-medium text-sm hover:text-primary"
             href="/a-propos"
           >
             {scopedI18N("about")}
           </Link>
-          <Link className="text-sm font-medium hover:text-primary" href="#">
+          <Link className="font-medium text-sm hover:text-primary" href="#">
             {scopedI18N("testimonials")}
           </Link>
-          <Link className="text-sm font-medium hover:text-primary" href="#">
+          <Link className="font-medium text-sm hover:text-primary" href="#">
             {scopedI18N("faq")}
           </Link>
-          <Link className="text-sm font-medium hover:text-primary" href="/blog">
+          <Link className="font-medium text-sm hover:text-primary" href="/blog">
             {scopedI18N("blog")}
           </Link>
           <Link
-            className="text-sm font-medium hover:text-primary"
+            className="font-medium text-sm hover:text-primary"
             href="/contact"
           >
             {scopedI18N("contact")}
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Button className="hidden rounded-full w-fit px-8 lg:px-4 lg:w-40 md:inline-flex bg-[#7864BB] hover:bg-[#6D28D9]">
+          <Button className="hidden w-fit rounded-full bg-[#7864BB] px-8 hover:bg-[#6D28D9] md:inline-flex lg:w-40 lg:px-4">
             {scopedI18N("login")}
           </Button>
           <Menubar className="border-none shadow-none">
@@ -120,12 +120,12 @@ export function Navigation() {
 
       <div
         className={cn(
-          "fixed inset-0 z-50 md:hidden transition-transform duration-300 ease-in-out bg-white",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          "fixed inset-0 z-50 bg-white transition-transform duration-300 ease-in-out md:hidden",
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
-        <div className="flex flex-col px-6 gap-4">
-          <div className="flex items-center justify-between border-b border-gray-200">
+        <div className="flex flex-col gap-4 px-6">
+          <div className="flex items-center justify-between border-gray-200 border-b">
             <Link
               className="flex items-center gap-2"
               href="/"
@@ -146,54 +146,54 @@ export function Navigation() {
           <nav className="flex flex-col gap-4">
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-semibold text-primary hover:text-primary"
+              className="font-semibold text-primary text-sm hover:text-primary"
               href="/"
             >
               {scopedI18N("home")}
             </Link>
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-medium hover:text-primary"
+              className="font-medium text-sm hover:text-primary"
               href="#"
             >
               {scopedI18N("services")}
             </Link>
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-medium hover:text-primary"
+              className="font-medium text-sm hover:text-primary"
               href="/a-propos"
             >
               {scopedI18N("about")}
             </Link>
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-medium hover:text-primary"
+              className="font-medium text-sm hover:text-primary"
               href="#"
             >
               {scopedI18N("testimonials")}
             </Link>
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-medium hover:text-primary"
+              className="font-medium text-sm hover:text-primary"
               href="#"
             >
               {scopedI18N("faq")}
             </Link>
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-medium hover:text-primary"
+              className="font-medium text-sm hover:text-primary"
               href="/blog"
             >
               {scopedI18N("blog")}
             </Link>
             <Link
               onClick={handleCloseMenu}
-              className="text-sm font-medium hover:text-primary"
+              className="font-medium text-sm hover:text-primary"
               href="/contact"
             >
               {scopedI18N("contact")}
             </Link>
-            <Button className="rounded-full w-fit px-8 lg:px-4 lg:w-40  bg-[#7864BB] hover:bg-[#6D28D9]">
+            <Button className="w-fit rounded-full bg-[#7864BB] px-8 hover:bg-[#6D28D9] lg:w-40 lg:px-4">
               {scopedI18N("login")}
             </Button>
           </nav>

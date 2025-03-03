@@ -8,8 +8,8 @@ export async function FAQ() {
   const locale = await getCurrentLocale();
 
   return (
-    <div className="md:p-6 p-3 bg-[#F5F5F5] overflow-hidden">
-      <div className="md:grid flex flex-col gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+    <div className="overflow-hidden bg-[#F5F5F5] p-3 md:p-6">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
         {Array(10)
           .fill(0)
           .map((_, index) => {
@@ -19,27 +19,27 @@ export async function FAQ() {
               <div
                 key={index}
                 className={cn(
-                  "w-full h-full relative",
-                  index + 1 == 10 ? "lg:col-span-3 md:col-span-2" : ""
+                  "relative h-full w-full",
+                  index + 1 === 10 ? "md:col-span-2 lg:col-span-3" : "",
                 )}
               >
                 <Card
                   className={cn(
-                    "border-none shadow-none absolute bg-white rounded-none transform",
-                    index + 1 == 9 ? "" : "hidden",
+                    "absolute transform rounded-none border-none bg-white shadow-none",
+                    index + 1 === 9 ? "" : "hidden",
                     locale !== "ar"
-                      ? "-rotate-6 translate-x-2 md:-rotate-12 md:translate-x-20"
-                      : "rotate-6 -translate-x-2 md:rotate-12 md:-translate-x-20"
+                      ? "-rotate-6 md:-rotate-12 translate-x-2 md:translate-x-20"
+                      : "-translate-x-2 md:-translate-x-20 rotate-6 md:rotate-12",
                   )}
                 >
                   <CardHeader className="flex flex-col items-start gap-4 pb-2">
                     <div
                       className={cn(
-                        "flex justify-between w-full",
-                        locale !== "ar" ? "pr-24" : "pl-24"
+                        "flex w-full justify-between",
+                        locale !== "ar" ? "pr-24" : "pl-24",
                       )}
                     >
-                      <div className="flex size-10 items-center text-semibold justify-center rounded-full bg-[#8B5CF6] text-white">
+                      <div className="flex size-10 items-center justify-center rounded-full bg-[#8B5CF6] text-semibold text-white">
                         {index + 1}
                       </div>
                       <svg
@@ -110,7 +110,7 @@ export async function FAQ() {
                         />
                       </svg>
                     </div>
-                    <CardTitle className="text-base font-semibold leading-tight">
+                    <CardTitle className="font-semibold text-base leading-tight">
                       {
                         //@ts-ignore
                         scopedI18N(question)
@@ -126,12 +126,12 @@ export async function FAQ() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="border-none shadow-none bg-transparent">
+                <Card className="border-none bg-transparent shadow-none">
                   <CardHeader className="flex flex-col items-start gap-4 pb-2">
-                    <div className="flex size-10 items-center text-semibold justify-center rounded-full bg-[#8B5CF6] text-white">
+                    <div className="flex size-10 items-center justify-center rounded-full bg-[#8B5CF6] text-semibold text-white">
                       {index + 1}
                     </div>
-                    <CardTitle className="text-base font-semibold leading-tight">
+                    <CardTitle className="font-semibold text-base leading-tight">
                       {
                         //@ts-ignore
                         scopedI18N(question)
@@ -151,16 +151,16 @@ export async function FAQ() {
             );
           })}
       </div>
-      <div className="mt-8 text-start flex-col gap-4 sm:gap-0 flex sm:flex-row items-center justify-between bg-white max-w-7xl mx-auto md:p-6 p-4">
+      <div className="mx-auto mt-8 flex max-w-7xl flex-col items-center justify-between gap-4 bg-white p-4 text-start sm:flex-row sm:gap-0 md:p-6">
         <div className="max-w-lg">
-          <p className="font-semibold text-violet-400 mb-2">
+          <p className="mb-2 font-semibold text-violet-400">
             {scopedI18N("more-questions.title")}
           </p>
           <p className="font-semibold text-violet-400">
             {scopedI18N("more-questions.description")}
           </p>
         </div>
-        <Button className="text-nowrap w-full sm:w-fit rounded-[6px] hover:bg-[#7C3AED] transition-colors">
+        <Button className="w-full text-nowrap rounded-[6px] transition-colors hover:bg-[#7C3AED] sm:w-fit">
           {scopedI18N("more-questions.button")}
         </Button>
       </div>

@@ -5,20 +5,20 @@ import Link from "next/link";
 
 export function Component() {
   return (
-    <div className="w-full h-fit bg-white">
-      <div className="w-full container space-y-16 h-full mx-auto px-4 py-14">
-        <header className="text-center space-y-2">
+    <div className="h-fit w-full bg-white">
+      <div className="container mx-auto h-full w-full space-y-16 px-4 py-14">
+        <header className="space-y-2 text-center">
           <p className="text-primary">Nous avons des blogs</p>
-          <h1 className="text-3xl font-bold tracking-tight">
+          <h1 className="font-bold text-3xl tracking-tight">
             Des blogs quotidiens pour vos soins
           </h1>
         </header>
 
-        <div className="grid md:grid-cols-2 w-full gap-8">
-          <article className="space-y-4 h-full justify-between">
-            <h2 className="text-lg font-semibold">Article 1</h2>
+        <div className="grid w-full gap-8 md:grid-cols-2">
+          <article className="h-full justify-between space-y-4">
+            <h2 className="font-semibold text-lg">Article 1</h2>
             <div className="grid gap-6">
-              <div className="relative w-full aspect-[3/2] h-80 overflow-hidden rounded-lg">
+              <div className="relative aspect-[3/2] h-80 w-full overflow-hidden rounded-lg">
                 <Image
                   src="/main-blog-post.jpg"
                   alt="Doctor consulting with patient"
@@ -28,13 +28,13 @@ export function Component() {
               </div>
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <p className="text-sm text-red-500 text-muted-foreground">
+                  <p className="text-muted-foreground text-red-500 text-sm">
                     Catégorie: Prévention du cancer
                   </p>
                   <p className="text-sm text-violet-500">
                     Publié le 15 septembre 2024
                   </p>
-                  <h3 className="text-xl font-semibold">
+                  <h3 className="font-semibold text-xl">
                     Les premiers signes du cancer colorectal à ne pas ignorer
                   </h3>
                   <p className="text-muted-foreground">
@@ -45,7 +45,7 @@ export function Component() {
                 </div>
                 <Link
                   href="#"
-                  className="inline-flex items-center text-sm text-primary hover:underline"
+                  className="inline-flex items-center text-primary text-sm hover:underline"
                 >
                   Voir Plus
                 </Link>
@@ -53,18 +53,18 @@ export function Component() {
             </div>
           </article>
 
-          <div className="space-y-4 h-fit">
+          <div className="h-fit space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">Catégories de blog</h2>
-              <Link href="#" className="text-sm text-primary hover:underline">
+              <h2 className="font-semibold text-lg">Catégories de blog</h2>
+              <Link href="#" className="text-primary text-sm hover:underline">
                 Voir Plus
               </Link>
             </div>
 
             <div className="grid flex-1 grid-cols-[1fr_100px] grid-rows-2">
-              <div className="grid h-fit gap-4 row-span-2">
-                <div className="border rounded-md">
-                  <div className="grid md:grid-cols-2 gap-4 items-center">
+              <div className="row-span-2 grid h-fit gap-4">
+                <div className="rounded-md border">
+                  <div className="grid items-center gap-4 md:grid-cols-2">
                     <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
                       <Image
                         src="/blog-post-1.png"
@@ -74,19 +74,19 @@ export function Component() {
                       />
                     </div>
                     <div className="space-y-2 px-2 py-2">
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         Prévention du cancer
                       </p>
                       <h3 className="font-semibold">
                         Articles sur les stratégies de prévention et
                         l&aposimportance du dépistage précoce.
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         3 hours ago
                       </p>
                       <Link
                         href="#"
-                        className="text-sm text-primary hover:underline"
+                        className="text-primary text-sm hover:underline"
                       >
                         Voir Plus
                       </Link>
@@ -94,8 +94,8 @@ export function Component() {
                   </div>
                 </div>
 
-                <div className="border rounded-md">
-                  <div className="grid md:grid-cols-2 gap-4 items-center">
+                <div className="rounded-md border">
+                  <div className="grid items-center gap-4 md:grid-cols-2">
                     <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
                       <Image
                         src="/blog-post-1.png"
@@ -105,19 +105,19 @@ export function Component() {
                       />
                     </div>
                     <div className="space-y-2 px-2 py-2">
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         Innovations médicales
                       </p>
                       <h3 className="font-semibold">
                         Les dernières avancées technologiques et médicales dans
                         le dépistage et le traitement du cancer
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-muted-foreground text-sm">
                         4 hours ago
                       </p>
                       <Link
                         href="#"
-                        className="text-sm text-primary hover:underline"
+                        className="text-primary text-sm hover:underline"
                       >
                         Voir Plus
                       </Link>
@@ -125,12 +125,12 @@ export function Component() {
                   </div>
                 </div>
               </div>
-              <Button size="icon" className="rounded-full mx-auto bg-primary">
+              <Button size="icon" className="mx-auto rounded-full bg-primary">
                 <ArrowUp />
               </Button>
               <Button
                 size="icon"
-                className="rounded-full mx-auto self-end bg-gray-500"
+                className="mx-auto self-end rounded-full bg-gray-500"
               >
                 <ArrowDown />
               </Button>

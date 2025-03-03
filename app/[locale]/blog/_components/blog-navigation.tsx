@@ -1,6 +1,4 @@
 "use client";
-
-import * as React from "react";
 import Link from "next/link";
 import { Search, Menu } from "lucide-react"; // Menu icon for mobile
 import {
@@ -49,14 +47,14 @@ export function BlogNavigation() {
     setIsMenuOpen(false);
   };
   return (
-    <header className="relative flex justify-center items-center h-[550px] w-full bg-white">
+    <header className="relative flex h-[550px] w-full items-center justify-center bg-white">
       <Image
         src="/blog-header-bg.png"
         alt="blog bg image"
         fill
         className="object-cover object-top"
       />
-      <div className="container z-40 rounded-md flex justify-between m-auto h-fit px-4 bg-white items-center">
+      <div className="container z-40 m-auto flex h-fit items-center justify-between rounded-md bg-white px-4">
         <Link className="flex items-center gap-2" href="/">
           <Image
             src="/logo.svg"
@@ -67,7 +65,7 @@ export function BlogNavigation() {
           />
         </Link>
         {/* Hamburger Menu Icon (Mobile) */}
-        <div className="md:hidden flex items-center">
+        <div className="flex items-center md:hidden">
           <button
             onClick={toggleMenu}
             className="text-gray-600 hover:text-gray-800 focus:outline-none"
@@ -77,14 +75,14 @@ export function BlogNavigation() {
         </div>
         {/* Navigation Menu (Desktop) */}
         <NavigationMenu
-          className={cn("hidden z-50 md:flex ml-4", {
-            "absolute top-[75px] flex flex-col bg-white w-full left-0 z-[100] border-b-2 border-gray-200":
+          className={cn("z-50 ml-4 hidden md:flex", {
+            "absolute top-[75px] left-0 z-[100] flex w-full flex-col border-gray-200 border-b-2 bg-white":
               isMenuOpen,
           })}
         >
           <NavigationMenuList className={cn({ "flex flex-col": isMenuOpen })}>
             <NavigationMenuItem
-              className={cn({ "border-b-2 border-gray-200": isMenuOpen })}
+              className={cn({ "border-gray-200 border-b-2": isMenuOpen })}
             >
               <NavigationMenuTrigger
                 className={cn({
@@ -103,10 +101,10 @@ export function BlogNavigation() {
                           href={category.href}
                           onClick={closeMenu}
                           className={cn(
-                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                           )}
                         >
-                          <div className="text-sm font-medium leading-none">
+                          <div className="font-medium text-sm leading-none">
                             {category.title}
                           </div>
                         </Link>
@@ -123,14 +121,14 @@ export function BlogNavigation() {
                 legacyBehavior
                 passHref
               >
-                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 font-medium text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                   Conseils & astuces
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/idees" onClick={closeMenu} legacyBehavior passHref>
-                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 font-medium text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                   Idées quotidiennes
                 </NavigationMenuLink>
               </Link>
@@ -139,7 +137,7 @@ export function BlogNavigation() {
         </NavigationMenu>
         <div className="ml-auto flex items-center space-x-4">
           <div className="relative">
-            <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-muted-foreground" />
+            <Search className="-translate-y-1/2 absolute top-1/2 left-2 h-4 w-4 transform text-muted-foreground" />
             <Input
               type="search"
               placeholder="Rechercher..."

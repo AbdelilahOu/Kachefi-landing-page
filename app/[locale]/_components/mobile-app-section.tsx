@@ -12,13 +12,13 @@ export function MobileAppSection() {
   const locale = useCurrentLocale();
   return (
     <div className=" bg-[#EFECF7] px-4 pt-12">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto grid items-center gap-16 lg:grid-cols-2">
         <div className="relative order-2 h-[400px] md:h-[500px] lg:h-[600px]">
           <Image
             src="/mobile-app.png"
             alt="Kachefi App Screenshot"
             fill
-            className="object-contain self-end"
+            className="self-end object-contain"
             priority
           />
         </div>
@@ -27,7 +27,7 @@ export function MobileAppSection() {
             <svg
               className={cn(
                 "absolute top-10",
-                locale !== "ar" ? "-left-16" : "-right-16 scale-x-[-1]"
+                locale !== "ar" ? "-left-16" : "-right-16 scale-x-[-1]",
               )}
               width="49"
               height="111"
@@ -44,8 +44,8 @@ export function MobileAppSection() {
 
             <svg
               className={cn(
-                "absolute -inset-11",
-                locale !== "ar" ? "" : "scale-x-[-1]"
+                "-inset-11 absolute",
+                locale !== "ar" ? "" : "scale-x-[-1]",
               )}
               width="47"
               height="47"
@@ -74,21 +74,21 @@ export function MobileAppSection() {
             </svg>
 
             <h1
-              className="text-4xl leading-10 mb-4 lg:text-5xl font-bold"
+              className="mb-4 font-bold text-4xl leading-10 lg:text-5xl"
               dangerouslySetInnerHTML={{ __html: scopedI18N("title") }}
-            ></h1>
+            />
           </div>
           <div className="space-y-2">
             <p className="text-lg">{scopedI18N("description")}</p>
             <div className="flex gap-2">
-              <div className="flex-1 flex">
-                <div className="h-full bg-white py-2 text-center px-2 text-sm font-semibold rounded-l-md mr-[1px]">
+              <div className="flex flex-1">
+                <div className="mr-[1px] h-full rounded-l-md bg-white px-2 py-2 text-center font-semibold text-sm">
                   {scopedI18N("phone-input.country-code")}
                 </div>
                 <Input
                   type="tel"
                   placeholder={scopedI18N("phone-input.placeholder")}
-                  className="bg-white rounded-l-none border-white/20"
+                  className="rounded-l-none border-white/20 bg-white"
                 />
               </div>
               <Button className="bg-primary hover:bg-[#8B6AFF]">

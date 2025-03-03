@@ -77,55 +77,55 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="w-full mx-auto p-6 bg-white rounded-lg">
-      <h1 className="text-3xl font-bold text-center text-primary mb-4">
+    <div className="mx-auto w-full rounded-lg bg-white p-6">
+      <h1 className="mb-4 text-center font-bold text-3xl text-primary">
         {scopedI18N("title")}
       </h1>
-      <p className="text-center text-gray-600 mb-8 max-w-3xl md:max-w-6xl mx-auto">
+      <p className="mx-auto mb-8 max-w-3xl text-center text-gray-600 md:max-w-6xl">
         {scopedI18N("description")}
       </p>
-      <div className="flex container m-auto flex-col md:flex-row gap-8 p-2 rounded-md md:h-[70vh] bg-white shadow-md">
-        <div className="bg-primary relative text-white p-8 rounded-lg flex flex-col gap-6 w-full md:w-1/3">
+      <div className="container m-auto flex flex-col gap-8 rounded-md bg-white p-2 shadow-md md:h-[70vh] md:flex-row">
+        <div className="relative flex w-full flex-col gap-6 rounded-lg bg-primary p-8 text-white md:w-1/3">
           <div>
-            <h2 className="text-2xl font-bold">
+            <h2 className="font-bold text-2xl">
               {scopedI18N("contact-details")}
             </h2>
             <p className="text-sm">{scopedI18N("contact-message")}</p>
           </div>
           <div className="flex items-center gap-3">
-            <Phone className="w-5 h-5" />
+            <Phone className="h-5 w-5" />
             <span> {scopedI18N("phone")}</span>
           </div>
           <div className="flex items-center gap-3">
-            <Mail className="w-5 h-5" />
+            <Mail className="h-5 w-5" />
             <span>{scopedI18N("email")}</span>
           </div>
           <div className="flex items-start gap-3">
-            <MapPin className="w-5 h-5 mt-1" />
+            <MapPin className="mt-1 h-5 w-5" />
             <span> {scopedI18N("address")}</span>
           </div>
-          <div className="flex gap-4 mt-auto">
+          <div className="mt-auto flex gap-4">
             <Link
               href="#"
-              className="hover:text-gray-200 text-slate-300 transition-colors"
+              className="text-slate-300 transition-colors hover:text-gray-200"
             >
-              <Facebook className="w-6 h-6" />
+              <Facebook className="h-6 w-6" />
             </Link>
             <Link
               href="#"
-              className="hover:text-gray-200 text-slate-300 transition-colors"
+              className="text-slate-300 transition-colors hover:text-gray-200"
             >
-              <Instagram className="w-6 h-6" />
+              <Instagram className="h-6 w-6" />
             </Link>
             <Link
               href="#"
-              className="hover:text-gray-200 text-slate-300 transition-colors"
+              className="text-slate-300 transition-colors hover:text-gray-200"
             >
-              <Linkedin className="w-6 h-6" />
+              <Linkedin className="h-6 w-6" />
             </Link>
           </div>
           <img
-            className="absolute w-full bottom-0 left-0"
+            className="absolute bottom-0 left-0 w-full"
             src="/contact-card-bg.png"
             alt=""
           />
@@ -133,9 +133,9 @@ export default function ContactForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex relative flex-col pt-4 gap-6 w-full md:w-2/3"
+            className="relative flex w-full flex-col gap-6 pt-4 md:w-2/3"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <FormField
                 control={form.control}
                 name="firstName"
@@ -146,7 +146,7 @@ export default function ContactForm() {
                       <Input
                         placeholder={scopedI18N("first-name-placeholder")}
                         {...field}
-                        className="border-0 focus-visible:ring-0 shadow-none rounded-none border-b-2 border-b-gray-300 focus:ring-0 focus:border-b-primary px-0"
+                        className="rounded-none border-0 border-b-2 border-b-gray-300 px-0 shadow-none focus:border-b-primary focus:ring-0 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -163,7 +163,7 @@ export default function ContactForm() {
                       <Input
                         placeholder={scopedI18N("last-name-placeholder")}
                         {...field}
-                        className="border-0 focus-visible:ring-0 shadow-none rounded-none border-b-2 border-b-gray-300 focus:ring-0 focus:border-b-primary px-0"
+                        className="rounded-none border-0 border-b-2 border-b-gray-300 px-0 shadow-none focus:border-b-primary focus:ring-0 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -181,7 +181,7 @@ export default function ContactForm() {
                         type="email"
                         placeholder={scopedI18N("email-placeholder")}
                         {...field}
-                        className="border-0 focus-visible:ring-0 shadow-none rounded-none border-b-2 border-b-gray-300 focus:ring-0 focus:border-b-primary px-0"
+                        className="rounded-none border-0 border-b-2 border-b-gray-300 px-0 shadow-none focus:border-b-primary focus:ring-0 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -198,7 +198,7 @@ export default function ContactForm() {
                       <Input
                         placeholder={scopedI18N("phone-placeholder")}
                         {...field}
-                        className="border-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring shadow-none rounded-none border-b-2 border-b-gray-300 focus:ring-0 focus:border-b-primary px-0"
+                        className="rounded-none border-0 border-b-2 border-b-gray-300 px-0 shadow-none focus:border-b-primary focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring"
                       />
                     </FormControl>
                     <FormMessage />
@@ -257,7 +257,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Textarea
                       placeholder={scopedI18N("message-placeholder")}
-                      className="min-h-[100px] border-0 focus-visible:ring-0 shadow-none rounded-none border-b-2 border-b-gray-300 focus:ring-0 focus:border-b-primary px-0"
+                      className="min-h-[100px] rounded-none border-0 border-b-2 border-b-gray-300 px-0 shadow-none focus:border-b-primary focus:ring-0 focus-visible:ring-0"
                       {...field}
                     />
                   </FormControl>
@@ -277,7 +277,7 @@ export default function ContactForm() {
                   : scopedI18N("submit-button")}
               </Button>
               <img
-                className="absolute -bottom-28 -rotate-[29deg] w-52 right-16"
+                className="-bottom-28 -rotate-[29deg] absolute right-16 w-52"
                 src="/contact-message.png"
               />
             </div>

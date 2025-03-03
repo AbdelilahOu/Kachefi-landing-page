@@ -32,23 +32,23 @@ export async function Testimonials() {
   ];
 
   return (
-    <div className="w-full h-fit bg-white">
-      <div className="w-full container h-full mx-auto px-4 py-14">
+    <div className="h-fit w-full bg-white">
+      <div className="container mx-auto h-full w-full px-4 py-14">
         <h2
-          className="text-4xl font-semibold text-primary mb-8 text-zinc-950"
+          className="mb-8 font-semibold text-4xl text-primary text-zinc-950"
           dangerouslySetInnerHTML={{ __html: scopedI18N("title") }}
-        ></h2>
+        />
         <div className="relative">
-          <div className="flex gap-4 flex-wrap md:flex-nowrap justify-center overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-4 overflow-hidden md:flex-nowrap">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="border-none relative shadow-none bg-gray-200"
+                className="relative border-none bg-gray-200 shadow-none"
               >
                 <CardContent className="p-6 pt-2">
-                  <div className="w-full h-14 absolute inset-0 bg-gradient-to-b from-white to-gray-200"></div>
+                  <div className="absolute inset-0 h-14 w-full bg-gradient-to-b from-white to-gray-200" />
                   <div className="flex flex-col items-start gap-4">
-                    <div className="grid grid-cols-2 z-30 w-full">
+                    <div className="z-30 grid w-full grid-cols-2">
                       <Image
                         alt="Profile picture"
                         className="rounded-full"
@@ -60,10 +60,10 @@ export async function Testimonials() {
                         }}
                         width="48"
                       />
-                      <div className="w-full flex justify-end">
-                        <div className="h-8 w-8 rounded-full bg-pink-500 flex items-center justify-center">
+                      <div className="flex w-full justify-end">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-pink-500">
                           <svg
-                            className="w-4 h-4 text-white"
+                            className="h-4 w-4 text-white"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
@@ -73,16 +73,16 @@ export async function Testimonials() {
                       </div>
                     </div>
 
-                    <div className="space-y-1.5 w-full">
-                      <div className="ml-auto flex justify-between w-full items-center">
-                        <h3 className="font-semibold text-lg text-[#1a237e]">
+                    <div className="w-full space-y-1.5">
+                      <div className="ml-auto flex w-full items-center justify-between">
+                        <h3 className="font-semibold text-[#1a237e] text-lg">
                           {testimonial.name}
                         </h3>
                         <div className="flex gap-0.5">
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                              className="h-5 w-5 fill-yellow-400 text-yellow-400"
                             />
                           ))}
                         </div>
@@ -93,7 +93,7 @@ export async function Testimonials() {
                   </div>
                   <div className="mt-6">
                     <div className="mb-4">
-                      <p className="text-blue-900 font-medium">
+                      <p className="font-medium text-blue-900">
                         {testimonial.quote1}
                       </p>
                     </div>
@@ -107,14 +107,14 @@ export async function Testimonials() {
           </div>
         </div>
 
-        <div className="w-full flex pt-14 justify-between">
+        <div className="flex w-full justify-between pt-14">
           <Button size="icon" className="rounded-full bg-gray-500">
             <ArrowLeft />
           </Button>
-          <div className="flex items-center justify-center gap-6 h-12">
-            <div className="size-2 rounded-full bg-primary"></div>
-            <div className="size-2 rounded-full bg-primary/60"></div>
-            <div className="size-2 rounded-full bg-primary/60"></div>
+          <div className="flex h-12 items-center justify-center gap-6">
+            <div className="size-2 rounded-full bg-primary" />
+            <div className="size-2 rounded-full bg-primary/60" />
+            <div className="size-2 rounded-full bg-primary/60" />
           </div>
           <Button size="icon" className="rounded-full">
             <ArrowRight />

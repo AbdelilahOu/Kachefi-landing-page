@@ -15,22 +15,22 @@ export default async function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <div className="flex-1 bg-gradient-to-r pb-8 from-violet-300 to-white">
-        <section className="container m-auto grid lg:grid-cols-2 gap-8 py-12 md:py-20">
+      <div className="flex-1 bg-gradient-to-r from-violet-300 to-white pb-8">
+        <section className="container m-auto grid gap-8 py-12 md:py-20 lg:grid-cols-2">
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-6">
               <h1
-                className="text-3xl text-center lg:text-start tracking-tighter sm:text-5xl xl:text-7xl"
+                className="text-center text-3xl tracking-tighter sm:text-5xl lg:text-start xl:text-7xl"
                 dangerouslySetInnerHTML={{ __html: scopedI18N("hero.title") }}
-              ></h1>
-              <p className="max-w-[600px] m-auto lg:m-0 text-center lg:text-start text-black md:text-xl">
+              />
+              <p className="m-auto max-w-[600px] text-center text-black md:text-xl lg:m-0 lg:text-start">
                 {scopedI18N("hero.subtitle")}
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
               <Button
                 size="lg"
-                className="bg-primary rounded-full hover:bg-[#6D28D9]"
+                className="rounded-full bg-primary hover:bg-[#6D28D9]"
               >
                 {scopedI18N("hero.download-app")}
               </Button>
@@ -39,7 +39,7 @@ export default async function Home() {
                 variant="ghost"
                 size="lg"
               >
-                <div className="size-10 flex pl-1 items-center justify-center rounded-full bg-white">
+                <div className="flex size-10 items-center justify-center rounded-full bg-white pl-1">
                   <svg
                     width="15"
                     height="18"
@@ -54,43 +54,43 @@ export default async function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative m-auto lg:ml-auto mt-8 lg:mt-0 w-fit h-fit">
+          <div className="relative m-auto mt-8 h-fit w-fit lg:mt-0 lg:ml-auto">
             <div className="h-[250px] w-[300px] md:h-[350px] md:w-[400px] lg:h-[500px] lg:w-[550px]">
               <Image
                 src="/hero-image.png"
                 alt="Healthcare Professional"
                 width={550}
                 height={500}
-                className="rounded-2xl w-full h-full m-auto object-cover"
+                className="m-auto h-full w-full rounded-2xl object-cover"
                 priority
               />
             </div>
-            <div className="absolute -top-4 sm:-top-8 -right-10 bg-white p-2 sm:p-4 rounded-lg shadow-lg">
+            <div className="-top-4 sm:-top-8 -right-10 absolute rounded-lg bg-white p-2 shadow-lg sm:p-4">
               <div className="flex items-center gap-2">
-                <span className="text-base lg:text-3xl font-bold text-primary">
+                <span className="font-bold text-base text-primary lg:text-3xl">
                   10K+
                 </span>
-                <div className="text-xs lg:text-sm leading-tight text-center">
+                <div className="text-center text-xs leading-tight lg:text-sm">
                   {scopedI18N("hero.stats.hours")}
                 </div>
               </div>
             </div>
-            <div className="absolute md:-bottom-12 -bottom-6 -left-8 bg-white px-4 py-2 rounded-lg shadow-lg w-fit lg:w-60">
-              <div className="flex items-center flex-col gap-4">
-                <div className="flex gap-2 items-center">
-                  <div className="flex -space-x-3">
+            <div className="md:-bottom-12 -bottom-6 -left-8 absolute w-fit rounded-lg bg-white px-4 py-2 shadow-lg lg:w-60">
+              <div className="flex flex-col items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="-space-x-3 flex">
                     {[1, 2, 3, 4].map((i) => (
                       <Image
                         key={i}
                         src="/user-1.png"
                         width={32}
                         height={32}
-                        className="inline-block size-6 lg:size-8 rounded-full ring-2 ring-slate-100"
+                        className="inline-block size-6 rounded-full ring-2 ring-slate-100 lg:size-8"
                         alt="user image"
                       />
                     ))}
                   </div>
-                  <span className="text-base lg:text-2xl font-bold text-primary">
+                  <span className="font-bold text-base text-primary lg:text-2xl">
                     2,650+
                   </span>
                 </div>
@@ -107,40 +107,40 @@ export default async function Home() {
       <Services />
 
       {/* Offers Section */}
-      <div className="w-full py-8 grid h-fit gap-4 mb-24 md:mb-0 px-10">
-        <div className="w-full flex flex-wrap md:flex-nowrap gap-4 justify-between">
-          <div className="rounded-md w-full">
+      <div className="mb-24 grid h-fit w-full gap-4 px-10 py-8 md:mb-0">
+        <div className="flex w-full flex-wrap justify-between gap-4 md:flex-nowrap">
+          <div className="w-full rounded-md">
             <Image
               src={"/offers/offer-1.png"}
               width={390}
               height={200}
               alt="offer 1 image"
-              className="rounded-md h-full w-full object-fill"
+              className="h-full w-full rounded-md object-fill"
             />
           </div>
-          <div className="rounded-md w-full">
+          <div className="w-full rounded-md">
             <Image
               src={"/offers/offer-2.png"}
               width={390}
               height={200}
               alt="offer 1 image"
-              className="rounded-md h-full w-full object-fill"
+              className="h-full w-full rounded-md object-fill"
             />
           </div>
-          <div className="rounded-md w-full">
+          <div className="w-full rounded-md">
             <Image
               src={"/offers/offer-1.png"}
               width={390}
               height={200}
               alt="offer 1 image"
-              className="rounded-md h-full w-full object-fill"
+              className="h-full w-full rounded-md object-fill"
             />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-6 h-12">
-          <div className="size-2 rounded-full bg-primary/60"></div>
-          <div className="size-2 rounded-full bg-primary ring  ring-offset-4 ring-primary/70"></div>
-          <div className="size-2 rounded-full bg-primary/60"></div>
+        <div className="flex h-12 items-center justify-center gap-6">
+          <div className="size-2 rounded-full bg-primary/60" />
+          <div className="size-2 rounded-full bg-primary ring ring-primary/70 ring-offset-4" />
+          <div className="size-2 rounded-full bg-primary/60" />
         </div>
       </div>
 
@@ -154,8 +154,8 @@ export default async function Home() {
       <Mission />
 
       {/* Ask Questions Section */}
-      <div className="w-full flex relative py-14 h-fit px-4">
-        <div className="w-12 absolute inset-6">
+      <div className="relative flex h-fit w-full px-4 py-14">
+        <div className="absolute inset-6 w-12">
           <svg
             width="117"
             height="135"
@@ -170,20 +170,20 @@ export default async function Home() {
             />
           </svg>
         </div>
-        <div className="flex gap-6 items-start m-auto">
+        <div className="m-auto flex items-start gap-6">
           <div className="flex-1 space-y-10 text-center">
             <div className="space-y-3">
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 {scopedI18N("faq.subtitle")}
               </p>
-              <h1 className="text-6xl font-semibold md:leading-9 leading-light tracking-tight text-[#1B3C74]">
+              <h1 className="font-semibold text-6xl text-[#1B3C74] leading-light tracking-tight md:leading-9">
                 {scopedI18N("faq.title")}
               </h1>
             </div>
-            <div className="relative max-w-lg m-auto">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+            <div className="relative m-auto max-w-lg">
+              <Search className="-translate-y-1/2 absolute top-1/2 left-3 h-4 w-4 text-gray-500" />
               <Input
-                className="pl-10 rounded-[6px] bg-gray-200"
+                className="rounded-[6px] bg-gray-200 pl-10"
                 placeholder="Search here"
               />
             </div>

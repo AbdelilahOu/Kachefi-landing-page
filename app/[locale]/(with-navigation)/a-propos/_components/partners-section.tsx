@@ -4,8 +4,8 @@ import Image from "next/image";
 export async function PartnersSection() {
   const scopedI18N = await getScopedI18n("about-page");
   return (
-    <section className="p-8 bg-gray-100">
-      <div className="flex flex-col container m-auto md:flex-row gap-4 mt-4">
+    <section className="bg-gray-100 p-8">
+      <div className="container m-auto mt-4 flex flex-col gap-4 md:flex-row">
         <Image
           src="/partners/partner-1.png"
           alt="Doctor smiling"
@@ -13,17 +13,17 @@ export async function PartnersSection() {
           height={300}
           className="rounded-lg"
         />
-        <div className="flex-1 grid grid-rows-5">
+        <div className="grid flex-1 grid-rows-5">
           <div className="row-span-2">
             <h3
-              className="text-4xl font-bold"
+              className="font-bold text-4xl"
               dangerouslySetInnerHTML={{
                 __html: scopedI18N("partners-section.title"),
               }}
-            ></h3>
+            />
             <p>{scopedI18N("partners-section.description")}</p>
           </div>
-          <div className="w-full relative row-span-3 h-full">
+          <div className="relative row-span-3 h-full w-full">
             <Image
               src="/partners/partner-2.png"
               alt="Medical consultation"

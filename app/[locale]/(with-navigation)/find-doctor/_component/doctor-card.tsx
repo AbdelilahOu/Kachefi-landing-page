@@ -30,30 +30,30 @@ export function DoctorCard({
   return (
     <div className="rounded-lg bg-white p-6 shadow-sm">
       <div className="flex gap-6">
-        <div className="h-26 w-26  aspect-square flex-shrink-0">
+        <div className="aspect-square h-26 w-26 flex-shrink-0">
           <Image
             src="/partners/partner-1.png"
             alt={name}
             width={96}
             height={96}
-            className="rounded-full aspect-square border-2 border-primary"
+            className="aspect-square rounded-full border-2 border-primary"
           />
         </div>
         <div className="flex flex-1 flex-col">
           <div className="flex items-start justify-between">
             <div>
-              <h3 className="text-lg font-semibold text-primary">{name}</h3>
-              <p className="text-sm text-gray-600">{specialty}</p>
-              <p className="mt-1 text-sm text-gray-500">{experience}</p>
+              <h3 className="font-semibold text-lg text-primary">{name}</h3>
+              <p className="text-gray-600 text-sm">{specialty}</p>
+              <p className="mt-1 text-gray-500 text-sm">{experience}</p>
             </div>
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm font-medium">{rating}</span>
+              <span className="font-medium text-sm">{rating}</span>
             </div>
           </div>
 
           <div className="mt-2">
-            <p className="text-sm text-black font-semibold">{location}</p>
+            <p className="font-semibold text-black text-sm">{location}</p>
           </div>
 
           <div className="mt-4 flex items-center justify-between">
@@ -62,15 +62,15 @@ export function DoctorCard({
                 <span className="text-pink-600">{t("doctor-card.free")}</span>
                 <span className="text-gray-600"> {consultationFee}</span>
               </p>
-              <div className="space-x-2 flex items-center gap-2 py-2">
-                <div className="bg-pink-500  rounded-sm text-white px-3 py-1">
+              <div className="flex items-center gap-2 space-x-2 py-2">
+                <div className="rounded-sm bg-pink-500 px-3 py-1 text-white">
                   <ThumbsUp
                     size={16}
-                    className="fill-white mr-2 inline-block"
+                    className="mr-2 inline-block fill-white"
                   />
                   99%
                 </div>
-                <span className="text-sm font-semibold">
+                <span className="font-semibold text-sm">
                   <span className="underline underline-offset-2">
                     {testimonials}
                   </span>{" "}

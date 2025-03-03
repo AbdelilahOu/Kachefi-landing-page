@@ -39,13 +39,13 @@ export default function Page() {
   ];
 
   return (
-    <div className="w-full h-full bg-purple-50">
-      <div className="w-full h-20 block rounded-b-[1rem] bg-primary"></div>
+    <div className="h-full w-full bg-purple-50">
+      <div className="block h-20 w-full rounded-b-[1rem] bg-primary" />
       {/* <Services /> */}
-      <div className="mx-auto container">
+      <div className="container mx-auto">
         <div className="my-8">
-          <h1 className="text-xl font-semibold">55 {t("available-doctors")}</h1>
-          <p className="text-sm text-gray-600">{t("booking-description")}</p>
+          <h1 className="font-semibold text-xl">55 {t("available-doctors")}</h1>
+          <p className="text-gray-600 text-sm">{t("booking-description")}</p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[1fr,400px]">
@@ -136,7 +136,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="block mt-6">
+      <div className="mt-6 block">
         <FAQSection />
       </div>
       <MobileAppSection />

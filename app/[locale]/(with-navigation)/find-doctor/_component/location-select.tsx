@@ -8,8 +8,8 @@ export function LocationSelector() {
 
   return (
     <div className="rounded-lg border bg-white p-4 shadow-sm">
-      <h2 className="mb-2 text-sm font-medium">{t("location.title")}</h2>
-      <p className="mb-4 text-xs text-gray-500">{t("location.subtitle")}</p>
+      <h2 className="mb-2 font-medium text-sm">{t("location.title")}</h2>
+      <p className="mb-4 text-gray-500 text-xs">{t("location.subtitle")}</p>
       <div className="flex gap-2">
         <Button
           variant="ghost"
@@ -33,7 +33,7 @@ export function LocationSelector() {
       <div className="mt-4 flex justify-between">
         <Button
           variant="secondary"
-          className="text-sm text-primary hover:underline"
+          className="text-primary text-sm hover:underline"
         >
           {t("location.find-location")}
         </Button>

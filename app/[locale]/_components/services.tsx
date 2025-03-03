@@ -8,21 +8,21 @@ export async function Services() {
   const commonScopedI18N = await getScopedI18n("common");
   const scopedI18N = await getScopedI18n("home-page.services");
   return (
-    <section className="container relative m-auto md:h-80 h-[500px] lg:h-[350px] flex flex-col gap-4 py-12 md:py-20">
-      <div className="rounded-xl absolute w-full -top-12 bg-white py-10 px-8 shadow-xl">
+    <section className="container relative m-auto flex h-[500px] flex-col gap-4 py-12 md:h-80 md:py-20 lg:h-[350px]">
+      <div className="-top-12 absolute w-full rounded-xl bg-white px-8 py-10 shadow-xl">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+          <Search className="-translate-y-1/2 absolute top-1/2 left-3 h-4 w-4 text-gray-500" />
           <Input
-            className="pl-10 rounded-[6px]"
+            className="rounded-[6px] pl-10"
             placeholder={scopedI18N("search-input")}
           />
-          <Button className="absolute rounded-[6px] right-0 top-1/2 -translate-y-1/2 bg-primary hover:bg-[#6D28D9]">
+          <Button className="-translate-y-1/2 absolute top-1/2 right-0 rounded-[6px] bg-primary hover:bg-[#6D28D9]">
             <Search />
             {commonScopedI18N("search")}
           </Button>
         </div>
         <div className="mt-8">
-          <h2 className="text-center font-medium text-black mb-6">
+          <h2 className="mb-6 text-center font-medium text-black">
             {scopedI18N("h2")}
           </h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
@@ -61,7 +61,7 @@ function ServiceCard({ Icon, Label }: Props) {
   return (
     <Button
       variant="outline"
-      className="flex flex-col h-fit lg:h-44 gap-2 hover:bg-[#E588A71A] hover:border-[#E588A7] border-2 py-4"
+      className="flex h-fit flex-col gap-2 border-2 py-4 hover:border-[#E588A7] hover:bg-[#E588A71A] lg:h-44"
     >
       <Image
         src={Icon}

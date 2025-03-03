@@ -50,10 +50,10 @@ const imageArticles = [
 
 export function BlogSidebar() {
   return (
-    <aside className="w-full px-4 sm:px-2  space-y-8">
+    <aside className="w-full space-y-8 px-4 sm:px-2">
       {/* Popular Topics */}
       <div>
-        <h2 className="text-lg font-semibold mb-4">Sujets populaires :</h2>
+        <h2 className="mb-4 font-semibold text-lg">Sujets populaires :</h2>
         <div className="flex flex-wrap gap-2">
           {popularTopics.map((topic) => (
             <Link key={topic.name} href={topic.href}>
@@ -86,16 +86,16 @@ export function BlogSidebar() {
         {imageArticles.map((article, index) => (
           <Link key={index} href={article.href} className="block">
             <span className="text-gray-500 text-sm">Article {index + 1}</span>
-            <Card className="relative mt-2 rounded-sm overflow-hidden group">
+            <Card className="group relative mt-2 overflow-hidden rounded-sm">
               <Image
                 src={article.image}
                 alt={article.title}
                 width={200}
                 height={200}
-                className="object-cover w-full h-[200px] transition-transform group-hover:scale-105"
+                className="h-[200px] w-full object-cover transition-transform group-hover:scale-105"
               />
-              <div className="absolute font-semibold inset-0 bg-black/40 justify-center flex items-center">
-                <h3 className="text-white font-medium text-center px-2">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 font-semibold">
+                <h3 className="px-2 text-center font-medium text-white">
                   {article.title}
                 </h3>
               </div>
