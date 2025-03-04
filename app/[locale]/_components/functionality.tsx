@@ -1,6 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { getScopedI18n } from "@/locales/server";
+import { useScopedI18n } from "@/locales/client";
 import {
   ArrowLeft,
   ArrowRight,
@@ -8,9 +10,10 @@ import {
   Bell,
   Settings,
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
-export async function Functionality() {
-  const scopedI18N = await getScopedI18n("home-page.functionality");
+export function Functionality() {
+  const scopedI18N = useScopedI18n("home-page.functionality");
 
   const features = [
     {
@@ -31,7 +34,62 @@ export async function Functionality() {
       description: scopedI18N("content.2.description"),
       link: "#",
     },
+    {
+      icon: <ClipboardList className="h-6 w-6 text-primary" />,
+      title: scopedI18N("content.0.title"),
+      description: scopedI18N("content.0.description"),
+      link: "#",
+    },
+    {
+      icon: <Settings className="h-6 w-6 text-primary" />,
+      title: scopedI18N("content.1.title"),
+      description: scopedI18N("content.1.description"),
+      link: "#",
+    },
+    {
+      icon: <Bell className="h-6 w-6 text-primary" />,
+      title: scopedI18N("content.2.title"),
+      description: scopedI18N("content.2.description"),
+      link: "#",
+    },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(0);
+
+  const visibleCards = 3;
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex === 0 ? features.length - 1 : prevIndex - 1;
+      return newIndex;
+    });
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex === features.length - 1 ? 0 : prevIndex + 1;
+      return newIndex;
+    });
+  };
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const calculatedCardWidth = containerWidth / visibleCards;
+      setCardWidth(calculatedCardWidth);
+
+      containerRef.current.scrollTo({
+        left: currentIndex * calculatedCardWidth,
+        behavior: "smooth",
+      });
+    }
+  }, [currentIndex, visibleCards]);
+
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   return (
     <div className="h-fit w-full bg-gradient-to-r from-violet-100 to-slate-50">
@@ -41,13 +99,18 @@ export async function Functionality() {
         </h2>
 
         <div className="relative">
-          <div className="flex gap-4 overflow-hidden">
+          <div
+            className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth"
+            ref={containerRef}
+            style={{ scrollSnapType: "x mandatory" }}
+          >
             {features.map((feature, index) => (
               <Card
                 key={index}
                 className={
-                  "flex w-full flex-none transform flex-col justify-between border-none bg-white p-6 transition-transform duration-300 md:w-1/3"
+                  "scroll-snap-align: start flex w-full flex-none transform flex-col justify-between border-none bg-white p-6 transition-transform duration-300"
                 }
+                style={{ width: cardWidth }}
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                   {feature.icon}
@@ -70,15 +133,30 @@ export async function Functionality() {
         </div>
 
         <div className="flex w-full justify-between pt-14">
-          <Button size="icon" className="rounded-full bg-gray-500">
+          <Button
+            size="icon"
+            className="rounded-full bg-gray-500"
+            onClick={handlePrev}
+          >
             <ArrowLeft />
           </Button>
           <div className="flex h-12 items-center justify-center gap-6">
-            <div className="size-2 rounded-full bg-primary" />
-            <div className="size-2 rounded-full bg-primary/60" />
-            <div className="size-2 rounded-full bg-primary/60" />
+            {features.map((_, index) => (
+              <div
+                key={index}
+                className={`size-2 rounded-full ${
+                  index === currentIndex ? "bg-primary" : "bg-primary/60"
+                } cursor-pointer`}
+                onClick={() => handleDotClick(index)}
+              />
+            ))}
           </div>
-          <Button size="icon" className="rounded-full">
+
+          <Button
+            size="icon"
+            className="rounded-full bg-gray-500"
+            onClick={handleNext}
+          >
             <ArrowRight />
           </Button>
         </div>

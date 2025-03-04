@@ -1,11 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { getScopedI18n } from "@/locales/server";
+import { useScopedI18n } from "@/locales/client";
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-export async function Testimonials() {
-  const scopedI18N = await getScopedI18n("home-page.testimonials");
+export function Testimonials() {
+  const scopedI18N = useScopedI18n("home-page.testimonials");
+
   const testimonials = [
     {
       image: "/user-1.png",
@@ -14,7 +18,13 @@ export async function Testimonials() {
       quote1: scopedI18N("content.0.quote1"),
       quote2: scopedI18N("content.0.quote2"),
     },
-
+    {
+      image: "/user-1.png",
+      name: scopedI18N("content.0.name"),
+      job: scopedI18N("content.0.job"),
+      quote1: scopedI18N("content.0.quote1"),
+      quote2: scopedI18N("content.0.quote2"),
+    },
     {
       image: "/user-1.png",
       name: scopedI18N("content.0.name"),
@@ -31,6 +41,61 @@ export async function Testimonials() {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const calculatedCardWidth = containerWidth / visibleCards;
+      setCardWidth(calculatedCardWidth);
+
+      containerRef.current.scrollTo({
+        left: currentIndex * calculatedCardWidth,
+        behavior: "smooth",
+      });
+    }
+  }, [currentIndex, visibleCards]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex =
+        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1;
+      return newIndex;
+    });
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex =
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1;
+      return newIndex;
+    });
+  };
+
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="h-fit w-full bg-white">
       <div className="container mx-auto h-full w-full px-4 py-14">
@@ -39,11 +104,16 @@ export async function Testimonials() {
           dangerouslySetInnerHTML={{ __html: scopedI18N("title") }}
         />
         <div className="relative">
-          <div className="flex flex-wrap justify-center gap-4 overflow-hidden md:flex-nowrap">
+          <div
+            className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth"
+            ref={containerRef}
+            style={{ scrollSnapType: "x mandatory" }}
+          >
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
                 className="relative border-none bg-gray-200 shadow-none"
+                style={{ width: cardWidth }}
               >
                 <CardContent className="p-6 pt-2">
                   <div className="absolute inset-0 h-14 w-full bg-gradient-to-b from-white to-gray-200" />
@@ -108,15 +178,29 @@ export async function Testimonials() {
         </div>
 
         <div className="flex w-full justify-between pt-14">
-          <Button size="icon" className="rounded-full bg-gray-500">
+          <Button
+            size="icon"
+            className="rounded-full bg-gray-500"
+            onClick={handlePrev}
+          >
             <ArrowLeft />
           </Button>
           <div className="flex h-12 items-center justify-center gap-6">
-            <div className="size-2 rounded-full bg-primary" />
-            <div className="size-2 rounded-full bg-primary/60" />
-            <div className="size-2 rounded-full bg-primary/60" />
+            {testimonials.map((_, index) => (
+              <div
+                key={index}
+                className={`size-2 rounded-full ${
+                  index === currentIndex ? "bg-primary" : "bg-primary/60"
+                } cursor-pointer`}
+                onClick={() => handleDotClick(index)}
+              />
+            ))}
           </div>
-          <Button size="icon" className="rounded-full">
+          <Button
+            size="icon"
+            className="rounded-full bg-gray-500"
+            onClick={handleNext}
+          >
             <ArrowRight />
           </Button>
         </div>

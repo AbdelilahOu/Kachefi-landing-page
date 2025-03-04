@@ -4,7 +4,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Globe, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useChangeLocale, useScopedI18n } from "@/locales/client";
+import {
+  useChangeLocale,
+  useCurrentLocale,
+  useScopedI18n,
+} from "@/locales/client";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -14,11 +18,14 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
   const changeLocale = useChangeLocale();
   const scopedI18N = useScopedI18n("navigation");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const locale = useCurrentLocale();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -26,6 +33,16 @@ export function Navigation() {
   const handleCloseMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  const navLinks = [
+    { href: `/${locale}`, label: scopedI18N("home") },
+    { href: `/${locale}#`, label: scopedI18N("services") },
+    { href: `/${locale}/a-propos`, label: scopedI18N("about") },
+    { href: `/${locale}#`, label: scopedI18N("testimonials") },
+    { href: `/${locale}#`, label: scopedI18N("faq") },
+    { href: `/${locale}/blog`, label: scopedI18N("blog") },
+    { href: `/${locale}/contact`, label: scopedI18N("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
@@ -42,36 +59,20 @@ export function Navigation() {
           </Link>
         </div>
         <nav className="m-auto hidden items-center gap-4 md:flex lg:gap-8">
-          <Link
-            className="font-semibold text-primary text-sm hover:text-primary"
-            href="/"
-          >
-            {scopedI18N("home")}
-          </Link>
-          <Link className="font-medium text-sm hover:text-primary" href="#">
-            {scopedI18N("services")}
-          </Link>
-          <Link
-            className="font-medium text-sm hover:text-primary"
-            href="/a-propos"
-          >
-            {scopedI18N("about")}
-          </Link>
-          <Link className="font-medium text-sm hover:text-primary" href="#">
-            {scopedI18N("testimonials")}
-          </Link>
-          <Link className="font-medium text-sm hover:text-primary" href="#">
-            {scopedI18N("faq")}
-          </Link>
-          <Link className="font-medium text-sm hover:text-primary" href="/blog">
-            {scopedI18N("blog")}
-          </Link>
-          <Link
-            className="font-medium text-sm hover:text-primary"
-            href="/contact"
-          >
-            {scopedI18N("contact")}
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={cn(
+                "font-medium text-sm hover:text-primary",
+                pathname === link.href
+                  ? "font-semibold text-primary"
+                  : "text-gray-600",
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <div className="flex items-center gap-4">
           <Button className="hidden w-fit rounded-full bg-[#7864BB] px-8 hover:bg-[#6D28D9] md:inline-flex lg:w-40 lg:px-4">
@@ -144,55 +145,21 @@ export function Navigation() {
             </Button>
           </div>
           <nav className="flex flex-col gap-4">
-            <Link
-              onClick={handleCloseMenu}
-              className="font-semibold text-primary text-sm hover:text-primary"
-              href="/"
-            >
-              {scopedI18N("home")}
-            </Link>
-            <Link
-              onClick={handleCloseMenu}
-              className="font-medium text-sm hover:text-primary"
-              href="#"
-            >
-              {scopedI18N("services")}
-            </Link>
-            <Link
-              onClick={handleCloseMenu}
-              className="font-medium text-sm hover:text-primary"
-              href="/a-propos"
-            >
-              {scopedI18N("about")}
-            </Link>
-            <Link
-              onClick={handleCloseMenu}
-              className="font-medium text-sm hover:text-primary"
-              href="#"
-            >
-              {scopedI18N("testimonials")}
-            </Link>
-            <Link
-              onClick={handleCloseMenu}
-              className="font-medium text-sm hover:text-primary"
-              href="#"
-            >
-              {scopedI18N("faq")}
-            </Link>
-            <Link
-              onClick={handleCloseMenu}
-              className="font-medium text-sm hover:text-primary"
-              href="/blog"
-            >
-              {scopedI18N("blog")}
-            </Link>
-            <Link
-              onClick={handleCloseMenu}
-              className="font-medium text-sm hover:text-primary"
-              href="/contact"
-            >
-              {scopedI18N("contact")}
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                onClick={handleCloseMenu}
+                href={link.href}
+                className={cn(
+                  "font-medium text-sm hover:text-primary",
+                  pathname === link.href
+                    ? "font-semibold text-primary"
+                    : "text-gray-600", // Or any other default text color
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Button className="w-fit rounded-full bg-[#7864BB] px-8 hover:bg-[#6D28D9] lg:w-40 lg:px-4">
               {scopedI18N("login")}
             </Button>

@@ -13,7 +13,7 @@
   },
   "home-page": {
     "hero": {
-      "title": "Take control of your <span class=\"text-primary\">health</span>, detect early, act early",
+      "title": "Take control of your <span class=\"text-primary\">health</span>, <br class=\"flex sm:hidden\" /> detect early, act early",
       "subtitle": "Kachefi, your pre-screening and awareness assistant to detect cancer risks and act quickly.",
       "download-app": "Download the App",
       "get-started": "Get Started",
@@ -148,7 +148,7 @@
       "linkedin-aria-label": "LinkedIn"
     },
     "hero-section": {
-      "title": "<span class=\"text-black font-medium\">About</span>,Our mission",
+      "title": "<span class=\"text-black font-medium\">About</span> ,Our mission",
       "rating": "Ranked #1 in medical appointments by users",
       "mission-statement": "At Kachefi, our mission is to support you in protecting your health with a simple and accessible tool. We firmly believe that prevention and early detection are key to reducing cancer risks. By raising public awareness about the first warning signs and facilitating access to reliable information, we want to encourage everyone to make informed decisions to preserve their well-being. Kechefi offers personalized recommendations and prevention paths, allowing you to act quickly and maximize the chances of early detection and treatment",
       "doctors": "Dedicated Doctors",

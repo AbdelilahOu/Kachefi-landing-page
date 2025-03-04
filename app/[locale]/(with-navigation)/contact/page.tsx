@@ -84,7 +84,7 @@ export default function ContactForm() {
       <p className="mx-auto mb-8 max-w-3xl text-center text-gray-600 md:max-w-6xl">
         {scopedI18N("description")}
       </p>
-      <div className="container m-auto flex flex-col gap-8 rounded-md bg-white p-2 shadow-md md:h-[70vh] md:flex-row">
+      <div className="container m-auto flex flex-col gap-8 rounded-md bg-white p-2 shadow-md md:h-[75vh] overflow-hidden md:flex-row">
         <div className="relative flex w-full flex-col gap-6 rounded-lg bg-primary p-8 text-white md:w-1/3">
           <div>
             <h2 className="font-bold text-2xl">

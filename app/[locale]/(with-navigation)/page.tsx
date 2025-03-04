@@ -20,7 +20,7 @@ export default async function Home() {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-6">
               <h1
-                className="text-center text-3xl tracking-tighter sm:text-5xl lg:text-start xl:text-7xl"
+                className="text-center text-4xl tracking-tighter sm:text-5xl lg:text-start xl:text-7xl"
                 dangerouslySetInnerHTML={{ __html: scopedI18N("hero.title") }}
               />
               <p className="m-auto max-w-[600px] text-center text-black md:text-xl lg:m-0 lg:text-start">
