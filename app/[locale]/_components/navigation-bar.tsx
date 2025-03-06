@@ -37,7 +37,7 @@ export function Navigation() {
   const navLinks = [
     { href: `/${locale}`, label: scopedI18N("home") },
     { href: `/${locale}#`, label: scopedI18N("services") },
-    { href: `/${locale}/a-propos`, label: scopedI18N("about") },
+    { href: `/${locale}/about`, label: scopedI18N("about") },
     { href: `/${locale}#`, label: scopedI18N("testimonials") },
     { href: `/${locale}#`, label: scopedI18N("faq") },
     { href: `/${locale}/blog`, label: scopedI18N("blog") },
@@ -154,7 +154,7 @@ export function Navigation() {
                   "font-medium text-sm hover:text-primary",
                   pathname === link.href
                     ? "font-semibold text-primary"
-                    : "text-gray-600", // Or any other default text color
+                    : "text-gray-600",
                 )}
               >
                 {link.label}
