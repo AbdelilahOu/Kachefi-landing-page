@@ -113,7 +113,7 @@ export function Testimonials() {
               <Card
                 key={index}
                 className="relative border-none bg-gray-200 shadow-none"
-                style={{ width: cardWidth }}
+                style={{ maxWidth: cardWidth }}
               >
                 <CardContent className="p-6 pt-2">
                   <div className="absolute inset-0 h-14 w-full bg-gradient-to-b from-white to-gray-200" />

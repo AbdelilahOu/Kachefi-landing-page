@@ -57,8 +57,7 @@ export function Functionality() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [cardWidth, setCardWidth] = useState(0);
-
-  const visibleCards = 3;
+  const [visibleCards, setVisibleCards] = useState(3);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => {
@@ -73,6 +72,23 @@ export function Functionality() {
       return newIndex;
     });
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -110,9 +126,9 @@ export function Functionality() {
                 className={
                   "scroll-snap-align: start flex w-full flex-none transform flex-col justify-between border-none bg-white p-6 transition-transform duration-300"
                 }
-                style={{ width: cardWidth }}
+                style={{ maxWidth: cardWidth }}
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10">
                   {feature.icon}
                 </div>
                 <div>
