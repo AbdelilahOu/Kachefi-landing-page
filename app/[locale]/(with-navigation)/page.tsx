@@ -1,14 +1,14 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Mission } from "../_components/our-mission";
-import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { MobileAppSection } from "../_components/mobile-app-section";
-import { Services } from "../_components/services";
-import { Functionality } from "../_components/functionality";
-import { Testimonials } from "../_components/testimonials";
-import { FAQ } from "../_components/faq";
 import { getScopedI18n } from "@/locales/server";
+import { Search } from "lucide-react";
+import Image from "next/image";
+import { FAQ } from "../_components/faq";
+import { Functionality } from "../_components/functionality";
+import { MobileAppSection } from "../_components/mobile-app-section";
+import { Mission } from "../_components/our-mission";
+import { Services } from "../_components/services";
+import { Testimonials } from "../_components/testimonials";
 
 export default async function Home() {
   const scopedI18N = await getScopedI18n("home-page");

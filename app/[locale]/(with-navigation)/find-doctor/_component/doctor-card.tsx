@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useScopedI18n } from "@/locales/client";
 import { Star, ThumbsUp } from "lucide-react";
 import Image from "next/image";
-import { useScopedI18n } from "@/locales/client";
 
 interface DoctorCardProps {
   name: string;

@@ -1,7 +1,7 @@
-import { PartnersSection } from "./_components/partners-section";
-import { VideoSection } from "./_components/video-section";
-import { TeamCarousel } from "./_components/team-carousel";
 import { HeroSection } from "./_components/hero-section";
+import { PartnersSection } from "./_components/partners-section";
+import { TeamCarousel } from "./_components/team-carousel";
+import { VideoSection } from "./_components/video-section";
 
 export default function MedicalMissionPage() {
   return (

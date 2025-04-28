@@ -1,16 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu, X } from "lucide-react";
-import Image from "next/image";
-import {
-  useChangeLocale,
-  useCurrentLocale,
-  useScopedI18n,
-} from "@/locales/client";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 import {
   Menubar,
   MenubarContent,
@@ -18,7 +8,17 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { cn } from "@/lib/utils";
+import {
+  useChangeLocale,
+  useCurrentLocale,
+  useScopedI18n,
+} from "@/locales/client";
+import { Globe, Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export function Navigation() {
   const changeLocale = useChangeLocale();

@@ -1,10 +1,7 @@
 "use client";
 
-// import { Services } from "@/app/_components/Services";
-import { DateNavigation } from "./_component/date-navigation";
-import { TimeSlotsSection } from "./_component/time-slot";
-import { DoctorCard } from "./_component/doctor-card";
-import { LocationSelector } from "./_component/location-select";
+import { MobileAppSection } from "@/app/[locale]/_components/mobile-app-section";
+import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -14,10 +11,13 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { MobileAppSection } from "@/app/[locale]/_components/mobile-app-section";
-import { Button } from "@/components/ui/button";
-import FAQSection from "./_component/faq-section";
 import { useScopedI18n } from "@/locales/client";
+// import { Services } from "@/app/_components/Services";
+import { DateNavigation } from "./_component/date-navigation";
+import { DoctorCard } from "./_component/doctor-card";
+import FAQSection from "./_component/faq-section";
+import { LocationSelector } from "./_component/location-select";
+import { TimeSlotsSection } from "./_component/time-slot";
 
 export default function Page() {
   const t = useScopedI18n("find-doctor");

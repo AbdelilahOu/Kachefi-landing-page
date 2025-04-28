@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
-import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { getScopedI18n } from "@/locales/server";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export async function ProfileCard() {
   const scopedI18N = await getScopedI18n("about-page");

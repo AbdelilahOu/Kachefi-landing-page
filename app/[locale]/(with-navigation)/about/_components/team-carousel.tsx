@@ -5,8 +5,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ProfileCard } from "./doctor-profile-card";
 import { getScopedI18n } from "@/locales/server";
+import { ProfileCard } from "./doctor-profile-card";
 
 export async function TeamCarousel() {
   const scopedI18N = await getScopedI18n("about-page");

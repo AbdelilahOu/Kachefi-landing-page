@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { Play } from "lucide-react";
 import { getScopedI18n } from "@/locales/server";
+import { Play } from "lucide-react";
+import Image from "next/image";
 
 export async function VideoSection() {
   const scopedI18N = await getScopedI18n("about-page");

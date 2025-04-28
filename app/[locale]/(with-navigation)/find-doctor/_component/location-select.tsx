@@ -1,7 +1,7 @@
 "use client";
 
-import { useScopedI18n } from "@/locales/client";
 import { Button } from "@/components/ui/button";
+import { useScopedI18n } from "@/locales/client";
 
 export function LocationSelector() {
   const t = useScopedI18n("find-doctor");

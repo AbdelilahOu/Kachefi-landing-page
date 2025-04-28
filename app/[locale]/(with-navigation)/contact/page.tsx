@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import {
-  Mail,
-  MapPin,
-  Phone,
   Facebook,
   Instagram,
   Linkedin,
+  Mail,
+  MapPin,
+  Phone,
 } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -23,10 +23,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import Link from "next/link";
+import { Textarea } from "@/components/ui/textarea";
 import { useScopedI18n } from "@/locales/client";
+import Link from "next/link";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);

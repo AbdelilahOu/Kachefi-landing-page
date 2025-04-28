@@ -1,4 +1,4 @@
-import { Eye, MessageSquare, Heart, Share2 } from "lucide-react";
+import { Eye, Heart, MessageSquare, Share2 } from "lucide-react";
 
 interface SocialMetricsProps {
   views: number;

@@ -1,12 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { getScopedI18n } from "@/locales/server";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import Link from "next/link";
 import { BlogNavigation } from "./_components/blog-navigation";
 import { BlogSidebar } from "./_components/side-section";
-import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { getScopedI18n } from "@/locales/server";
 
 export default async function WithNavigationLayout({
   children,

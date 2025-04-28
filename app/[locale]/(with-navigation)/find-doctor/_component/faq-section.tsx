@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useScopedI18n } from "@/locales/client";
+import Image from "next/image";
 
 const faqItems = [
   {

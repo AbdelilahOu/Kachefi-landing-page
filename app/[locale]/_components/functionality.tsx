@@ -6,8 +6,8 @@ import { useScopedI18n } from "@/locales/client";
 import {
   ArrowLeft,
   ArrowRight,
-  ClipboardList,
   Bell,
+  ClipboardList,
   Settings,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";

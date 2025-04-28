@@ -1,6 +1,5 @@
 "use client";
-import Link from "next/link";
-import { Search, Menu } from "lucide-react"; // Menu icon for mobile
+import { Input } from "@/components/ui/input";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,9 +8,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { Menu, Search } from "lucide-react"; // Menu icon for mobile
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const categories = [
