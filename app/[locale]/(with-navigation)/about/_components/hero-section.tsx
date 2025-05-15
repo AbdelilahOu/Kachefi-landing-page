@@ -1,6 +1,7 @@
 import { getScopedI18n } from "@/locales/server";
-import { Star } from "lucide-react";
 import Image from "next/image";
+
+import { Star } from "lucide-react";
 
 export async function HeroSection() {
   const scopedI18N = await getScopedI18n("about-page");
